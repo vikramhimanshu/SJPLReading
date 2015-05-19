@@ -308,6 +308,7 @@ static ServiceRequest *sharedInstance;
     self.account = param;
     self.account.accountName = param.accountName;
     self.account.passcode = param.passcode;
+    self.account.phone = param.phone;
     NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createRequestWithAccountParameters:param]
                                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
                                           {
@@ -356,11 +357,12 @@ static ServiceRequest *sharedInstance;
 -(NSMutableURLRequest *)createRequestWithAccountParameters:(Account *)param
 {
     NSMutableString *loginURL = [NSMutableString stringWithString:@"http://www.sjplsummer.org/accounts.json?"];
-    [loginURL appendFormat:@"accountName=%@&emailAddress=%@&branchId=%@&passcode=%@&role=READER",
-     param.accountName,param.emailAddress,param.branchId,param.passcode];
+    [loginURL appendFormat:@"accountName=%@&phone=%@&emailAddress=%@&branchId=%@&passcode=%@&role=READER",
+     param.accountName,param.phone,param.emailAddress,param.branchId,param.passcode];
     
     NSDictionary *newAcc = @{@"accountName": param.accountName,
                                          @"emailAddress": param.emailAddress,
+                                         @"phone": param.phone,
                                          @"branchId": param.branchId,
                                          @"passcode": param.passcode,
                                          @"role":@"READER"};

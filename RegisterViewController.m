@@ -13,15 +13,18 @@
 #import "Branch.h"
 #import "Account.h"
 #import "Utillities.h"
+#import "UIColor+SJPLColors.h"
 
 @interface RegisterViewController () <UITableViewDataSource,UITableViewDelegate,UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *accountName;
-@property (weak, nonatomic) IBOutlet UITextField *passcode;
-@property (weak, nonatomic) IBOutlet UITextField *emails;
-@property (weak, nonatomic) IBOutlet UIPickerView *branchNames;
+@property (weak, nonatomic) IBOutlet UITextField *accountNameTxt;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberText;
+@property (weak, nonatomic) IBOutlet UITextField *passcodeTxt;
+@property (weak, nonatomic) IBOutlet UITextField *emailsTxt;
+@property (weak, nonatomic) IBOutlet UIPickerView *branchNamesPicker;
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *accountNameCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *phoneNumberCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *passcodeCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *emailCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *pickerCell;
@@ -41,11 +44,14 @@
     [super viewDidLoad];
     self.tableViewCells = @[self.accountNameCell,
                             self.passcodeCell,
+                            self.phoneNumberCell,
                             self.emailCell,
                             self.pickerCell];
     self.isRegistrationModeActive = NO;
     
-    [self.accountName becomeFirstResponder];
+    [self.accountNameTxt becomeFirstResponder];
+    
+    self.view.backgroundColor = [UIColor colorWithBackgroundImage];
     
     ServiceRequest *sr = [ServiceRequest sharedRequest];
     [sr getBranchDetailsWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
@@ -53,11 +59,11 @@
         
         if (response) {
             dispatch_sync(dispatch_get_main_queue(), ^{
-                [self.branchNames reloadAllComponents];
+                [self.branchNamesPicker reloadAllComponents];
             });
         }
         else
-            [self.branchNames reloadAllComponents];
+            [self.branchNamesPicker reloadAllComponents];
         
     }];
 }
@@ -66,11 +72,12 @@
 {
     ServiceRequest *sr = [ServiceRequest sharedRequest];
     Account *acc = [Account new];
-    acc.accountName = self.accountName.text;
-    acc.passcode = self.passcode.text;
-    acc.emailAddress = self.emails.text;
+    acc.accountName = self.accountNameTxt.text;
+    acc.phone = self.phoneNumberText.text;
+    acc.passcode = self.passcodeTxt.text;
+    acc.emailAddress = self.emailsTxt.text;
     
-    NSUInteger selection = [self.branchNames selectedRowInComponent:0];
+    NSUInteger selection = [self.branchNamesPicker selectedRowInComponent:0];
     acc.branchId = ((Branch *)[self.branches.branches objectAtIndex:selection]).id;
     
     [sr startRegisterTaskWithParameters:acc completionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
@@ -99,8 +106,8 @@
 -(void)startLoginRequest
 {
     Account *acc = [Account new];
-    acc.accountName = self.accountName.text;
-    acc.passcode = self.passcode.text;
+    acc.accountName = self.accountNameTxt.text;
+    acc.passcode = self.passcodeTxt.text;
     ServiceRequest *sr = [ServiceRequest sharedRequest];
     [sr startLoginTaskWithParameters:acc
                    completionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
@@ -125,7 +132,7 @@
                                           cancelButtonTitle:nil
                                           otherButtonTitles:@"Ok",nil];
         [error show];
-        [self.accountName becomeFirstResponder];
+        [self.accountNameTxt becomeFirstResponder];
     }
 }
 
@@ -138,12 +145,12 @@
             
             if (response) {
                 dispatch_sync(dispatch_get_main_queue(), ^{
-                    [self.branchNames reloadAllComponents];
+                    [self.branchNamesPicker reloadAllComponents];
                     [self switchToRegistrationView:sender];
                 });
             }
             else
-                [self.branchNames reloadAllComponents];
+                [self.branchNamesPicker reloadAllComponents];
             
         }];
     }
@@ -157,27 +164,27 @@
 {
     sender.title = self.isRegistrationModeActive?@"Registration":@"Login";
     
-    [self.accountName setDelegate:nil];
-    [self.passcode setDelegate:nil];
-    [self.emails setDelegate:nil];
+    [self.accountNameTxt setDelegate:nil];
+    [self.passcodeTxt setDelegate:nil];
+    [self.emailsTxt setDelegate:nil];
     
     self.isRegistrationModeActive = !self.isRegistrationModeActive;
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                   withRowAnimation:UITableViewRowAnimationBottom];
     [self.tableView reloadData];
     
-    [self.accountName setDelegate:self];
-    [self.passcode setDelegate:self];
-    [self.emails setDelegate:self];
+    [self.accountNameTxt setDelegate:self];
+    [self.passcodeTxt setDelegate:self];
+    [self.emailsTxt setDelegate:self];
 }
 
 - (IBAction)doneAction:(UIBarButtonItem *)sender
 {
-    if (!self.isRegistrationModeActive && [self.accountName.text length] && [self.passcode.text length]) {
+    if (!self.isRegistrationModeActive && [self.accountNameTxt.text length] && [self.passcodeTxt.text length]) {
         [self startLoginRequest];
     } else if (self.isRegistrationModeActive &&
-               [self.accountName.text length] && [self.passcode.text length] &&
-               [self.branches.branches count] && [self.emails.text length])
+               [self.accountNameTxt.text length] && [self.passcodeTxt.text length] &&
+               [self.branches.branches count] && [self.emailsTxt.text length])
     {
         [self startRegistrationRequest];
     }
@@ -225,7 +232,7 @@
                      cancelButtonTitle:@"ok" otherButtonTitles:nil];
         [alert show];
     }
-    if ([textField isEqual:self.emails] && ![self validateEmail:textField.text]) {
+    if ([textField isEqual:self.emailsTxt] && ![self validateEmail:textField.text]) {
         UIAlertView * alert = [Utillities alertViewWithTitle:@"Invalid Email" message:@"Please enter a valid email id" delegate:nil
                                            cancelButtonTitle:@"ok" otherButtonTitles:nil];
         [alert show];
@@ -234,16 +241,16 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    if ([textField isEqual:self.accountName]) {
-        [self.passcode becomeFirstResponder];
+    if ([textField isEqual:self.accountNameTxt]) {
+        [self.passcodeTxt becomeFirstResponder];
     }
-    else if ([textField isEqual:self.passcode])
+    else if ([textField isEqual:self.passcodeTxt])
     {
-        [self.emails becomeFirstResponder];
+        [self.emailsTxt becomeFirstResponder];
     }
-    else if ([textField isEqual:self.emails])
+    else if ([textField isEqual:self.emailsTxt])
     {
-        [self.branchNames becomeFirstResponder];
+        [self.branchNamesPicker becomeFirstResponder];
         [textField resignFirstResponder];
     }
     return [textField.text length];
@@ -316,14 +323,14 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height = 44.0;
-    if (indexPath.row==3)
+    if (indexPath.row==4)
         height = 162;
     return height;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.isRegistrationModeActive?4:2;
+    return self.isRegistrationModeActive?5:2;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

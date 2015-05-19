@@ -8,7 +8,21 @@
 
 #import "ActivityGridCellContents.h"
 
+@interface ActivityGridCellContents ()
+
+@property (nonatomic, strong) NSString *internalDescription;
+
+@end
+
 @implementation ActivityGridCellContents
+
+-(void)setDescription:(NSString *)description {
+    self.internalDescription = description;
+}
+
+-(NSString *)description {
+    return self.internalDescription;
+}
 
 -(NSURL *)url
 {

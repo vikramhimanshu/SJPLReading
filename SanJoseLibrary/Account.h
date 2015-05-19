@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *accountName;
+@property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSString *branchId;
 @property (nonatomic, strong) NSString *emailAddress;
 @property (nonatomic, strong) NSString *passcode;

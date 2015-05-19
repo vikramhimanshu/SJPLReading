@@ -168,7 +168,7 @@
     }
     else if (kind == UICollectionElementKindSectionFooter) {
         PrizesFooterView *reusableview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"PrizesFooterView" forIndexPath:indexPath];
-        [reusableview setupViewWithPrizeType:self.prizesForUser userPrizeStatus:self.currentUser.prizes];
+//        [reusableview setupViewWithPrizeType:self.prizesForUser userPrizeStatus:self.currentUser.prizes];
         return reusableview;
     }
     return nil;
