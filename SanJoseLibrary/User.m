@@ -9,7 +9,13 @@
 #import "User.h"
 #import "Activity.h"
 
-@implementation User
+static NSInteger const MinReadingMinutes = 600;
+static NSInteger const MaxReadingMinutes = 18000;
+static NSInteger const ReadingMinutesInterval = 20;
+
+@implementation User {
+    NSInteger _currentDesignIndex;
+}
 
 -(NSString *)fullName
 {
@@ -51,18 +57,36 @@
 
 -(NSNumber *)readingLog
 {
-    if ([_readingLog integerValue]>900)
-        _readingLog = [NSNumber numberWithInteger:900];
+    if ([_readingLog integerValue]>MaxReadingMinutes)
+        _readingLog = [NSNumber numberWithInteger:MaxReadingMinutes];
     else if ([_readingLog integerValue]<0)
         _readingLog = [NSNumber numberWithInteger:0];
     
     return _readingLog;
 }
 
+-(NSInteger)nextDesignIndex
+{
+    NSInteger current = [self.readingLog integerValue];
+    NSInteger index = (current/MinReadingMinutes > 5)? 5 : current/MinReadingMinutes;
+    if (_currentDesignIndex != index) {
+        _currentDesignIndex = index;
+    }
+    _currentDesignIndex = _currentDesignIndex < 1? 1 : _currentDesignIndex;
+    return _currentDesignIndex;
+}
+
 -(void)incrementReadingLog
 {
     NSInteger current = [self.readingLog integerValue];
-    current = current+20;
+    current = current + ReadingMinutesInterval;
+    self.readingLog = [NSNumber numberWithInteger:current];
+}
+
+-(void)decrementReadingLog
+{
+    NSInteger current = [self.readingLog integerValue];
+    current = current - ReadingMinutesInterval;
     self.readingLog = [NSNumber numberWithInteger:current];
 }
 

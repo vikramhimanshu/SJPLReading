@@ -21,13 +21,16 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *batteryFullImageView;
 
+@property (nonatomic) BOOL shouldShowNextDesign;
+@property (nonatomic) NSInteger currentReadingTracker;
+
 @end
 
 @implementation ReadingLogViewController
 
 -(void)didReceiveMemoryWarning
 {
-    if ([self.currentUser.readingLog integerValue] == 900) {
+    if (self.currentReadingTracker == MinReadingMinutes) {
         self.batteryFullImageView.hidden = NO;
         [self.readingLogCollectionViewCells removeAllObjects];
         self.readingLogCollectionViewCells = nil;
@@ -41,6 +44,10 @@
     
     self.currentUser = [(ContainerViewController *)self.parentViewController currentUser];
     
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"read_background"]];
+    [backgroundView setContentMode:UIViewContentModeScaleAspectFill];
+    self.readingLogCollectionView.backgroundView = backgroundView;
+    
     self.readingLogCollectionViewCells = [[NSMutableArray alloc] initWithCapacity:23];
     for (int i =0; i<[self.readingLogCollectionView numberOfItemsInSection:0]; i++)
     {
@@ -48,13 +55,6 @@
             NSIndexPath *ip = [NSIndexPath indexPathForItem:i inSection:0];
             ReadingLogCell *cell = [self.readingLogCollectionView dequeueReusableCellWithReuseIdentifier:@"readingLogCell"
                                                                                             forIndexPath:ip];
-            NSString *imgName = nil;
-            if ((ip.item+1)/10<1) {
-                imgName = [NSString stringWithFormat:@"APP_BATTERY_OFF-0%ld",(long)ip.item+1];
-            } else {
-                imgName = [NSString stringWithFormat:@"APP_BATTERY_OFF-%ld",(long)ip.item+1];
-            }
-            [cell.imageView setImage:[UIImage imageNamed:imgName]];
             [self.readingLogCollectionViewCells addObject:cell];
         }
     }
@@ -86,16 +86,28 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSInteger max = [self.currentUser.readingLog integerValue]/20;
-    if (max>0) {
+    if ([self.currentUser.readingLog integerValue] > 0) {
         [self updateCellAtIndexPath:self.currentIndexPath];
     }
+}
+
+-(BOOL)shouldShowNextDesign
+{
+    NSInteger idx = [self.currentUser.readingLog integerValue]/600;
+    return idx == [self.currentUser nextDesignIndex];
+}
+
+-(NSInteger)currentReadingTracker
+{
+    _currentReadingTracker = labs([self.currentUser.readingLog integerValue]-[self.currentUser nextDesignIndex]*MinReadingMinutes);
+    
+    return _currentReadingTracker;
 }
 
 -(NSIndexPath *)currentIndexPath
 {
     if (!_currentIndexPath) {
-        self.currentIndexPath = [NSIndexPath indexPathForItem:[self.readingLogCollectionViewCells count]-1
+        self.currentIndexPath = [NSIndexPath indexPathForItem:0
                                                     inSection:0];
     }
     return _currentIndexPath;
@@ -104,7 +116,10 @@
 -(void)updateIndexPath
 {
     NSUInteger idx = self.currentIndexPath.item;
-    self.currentIndexPath = [NSIndexPath indexPathForItem:idx-1 inSection:self.currentIndexPath.section];
+    if (idx < [self.readingLogCollectionView numberOfItemsInSection:0]) {
+        self.currentIndexPath = [NSIndexPath indexPathForItem:idx+1
+                                                    inSection:self.currentIndexPath.section];
+    }
 }
 
 -(void)updateReadingLog:(UIBarButtonItem *)sender
@@ -133,31 +148,36 @@
 
 - (void)updateCellAtIndexPath:(NSIndexPath *)ip
 {
-    NSInteger max = ([self.readingLogCollectionViewCells count]-1)-([self.currentUser.readingLog integerValue]/20);
-    if (ip.item<=max) {
-        if (self.currentIndexPath.item==-1) {
-            self.batteryFullImageView.hidden = NO;
-            self.readingLogCollectionView.hidden = YES;
-            UINavigationItem *navItem = self.parentViewController.parentViewController.navigationItem;
-            navItem.rightBarButtonItem.enabled = NO;
+    NSInteger max = self.currentReadingTracker/20;
+
+    if (max >= [self.readingLogCollectionView numberOfItemsInSection:0]) {
+
+        if (self.shouldShowNextDesign) {
+            NSString *imageName = [NSString stringWithFormat:@"Design%ld",(long)[self.currentUser nextDesignIndex]];
+            self.batteryFullImageView.image = [UIImage imageNamed:imageName];
         }
+
+        self.batteryFullImageView.hidden = NO;
+        self.readingLogCollectionView.hidden = YES;
+        UINavigationItem *navItem = self.parentViewController.parentViewController.navigationItem;
+        navItem.rightBarButtonItem.enabled = NO;
+
         return;
-    }
+    } else if (ip.item > max-1) return;
     
-    [self.readingLogCollectionView performBatchUpdates:^{
-        @autoreleasepool {
+    [self.readingLogCollectionView performBatchUpdates:^
+    {
+        @autoreleasepool
+        {
             ReadingLogCell *cell = [self.readingLogCollectionViewCells objectAtIndex:ip.item];
-            NSString *imgName = nil;
-            if ((ip.item+1)/10<1) {
-                imgName = [NSString stringWithFormat:@"APP_BATTERY_ON-0%ld",(long)ip.item+1];
-            } else {
-                imgName = [NSString stringWithFormat:@"APP_BATTERY_ON-%ld",(long)ip.item+1];
-            }
-            [cell.imageView setImage:nil];
+            NSString *imgName = @"CHECKMARK";
             [cell.imageView setImage:[UIImage imageNamed:imgName]];
         }
-    } completion:^(BOOL finished) {
+    }
+                                            completion:^(BOOL finished)
+    {
         [self updateIndexPath];
+        
         [self updateCellAtIndexPath:self.currentIndexPath];
     }];
 }
@@ -169,7 +189,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 45;
+    return 30;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

@@ -19,8 +19,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "App Icon 180 x 180, SJPL SRC15 iOS.png",
       "scale" : "3x"
     },
     {
@@ -50,7 +51,7 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "iPad_76x76.png",
+      "filename" : "App Icon 76 x 76, SJPL SRC15 iOS.png",
       "scale" : "1x"
     },
     {

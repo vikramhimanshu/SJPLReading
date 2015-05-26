@@ -11,43 +11,45 @@
 
 @interface UserType ()
 
-@property (nonatomic, strong) NSString *internalDescription;
-
 @end
 
-@implementation UserType
+@implementation UserType {
+    NSString *internalDescription;
+}
 
 -(void)setDescription:(NSString *)description {
-    self.internalDescription = description;
+    internalDescription = description;
 }
 
 -(NSString *)description {
-    return self.internalDescription;
+    return internalDescription;
 }
 
 -(UIColor *)color
 {
-    UIColor *color = [UIColor whiteColor];
-    if ([_name isEqualToString:@"READER"]) {
-        color = UIColorFromRGB(0xD5453A);
+    if ([_name caseInsensitiveCompare:@"READER"] == NSOrderedSame) {
+        return [UIColor sjplYellowColor];
     }
-    else if ([_name isEqualToString:@"PRE-READER"])
+    else if ([_name caseInsensitiveCompare:@"PRE-READER"] == NSOrderedSame)
     {
-        color = UIColorFromRGB(0xD08035);
+        return [UIColor sjplRedColor];
     }
-    else if ([_name isEqualToString:@"TEEN"])
+    else if ([_name caseInsensitiveCompare:@"TEEN"] == NSOrderedSame)
     {
-        color = UIColorFromRGB(0x257782);
+        return [UIColor sjplBlueColor];
     }
-    else if ([_name isEqualToString:@"ADULT"])
+    else if ([_name caseInsensitiveCompare:@"ADULT"] == NSOrderedSame)
     {
-        color = UIColorFromRGB(0x2CA341);
+        return [UIColor sjplGreenColor];
     }
-    else if ([_name isEqualToString:@"STAFF SJPL"])
+    else if ([_name caseInsensitiveCompare:@"STAFF SJPL"] == NSOrderedSame)
     {
-        color = UIColorFromRGB(0x6D6E70);
-    }    
-    return color;
+        return [UIColor sjplGrayColor];
+    }
+    else
+    {
+        return [UIColor colorWithBackgroundImage];
+    }
 }
 
 @end

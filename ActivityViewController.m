@@ -10,12 +10,14 @@
 #import "ContainerViewController.h"
 #import "User.h"
 
-#define IndexActivityGrid 0
-#define IndexReadingLog 1
-#define IndexInformation 2
+#define IndexReadingLog     0
+#define IndexActivityGrid   1
+#define IndexPrize          2
+#define IndexInformation    3
 
 #define SegueIdentifierActivityGrid @"ActivityGridViewController"
 #define SegueIdentifierReadingLog @"ReadingLogViewController"
+#define SegueIdentifierPrize @"PrizesViewController"
 #define SegueIdentifierInformation @"InformationViewController"
 
 @interface ActivityViewController ()
@@ -68,7 +70,11 @@
         case IndexReadingLog:
             identifier = SegueIdentifierReadingLog;
             break;
-
+            
+        case IndexPrize:
+            identifier = SegueIdentifierPrize;
+            break;
+            
         case IndexInformation:
             identifier = SegueIdentifierInformation;
             break;

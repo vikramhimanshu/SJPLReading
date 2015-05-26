@@ -8,9 +8,7 @@
 
 #import "ContainerViewController.h"
 
-#define SegueIdentifierActivityGrid @"ActivityGridViewController"
 #define SegueIdentifierReadingLog @"ReadingLogViewController"
-#define SegueIdentifierInformation @"InformationViewController"
 
 @interface ContainerViewController ()
 
@@ -24,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    [self swapSegueWithIdentifier:SegueIdentifierActivityGrid];
+    [self swapSegueWithIdentifier:SegueIdentifierReadingLog];
 }
 
 #pragma mark - Navigation

@@ -53,16 +53,6 @@
             });
         }        
     }];
-    
-    [sr getPrizeAndUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
-        PrizeTypes *prizes = [[PrizeTypes alloc] prizeTypesWithProperties:json[@"prizes"]];
-        self.prizesForUser = [prizes prizesForUserType:self.currentUser.userType];
-        if (response) {
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                [self.activityGridCollectionView reloadData];
-            });
-        }
-    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -72,22 +62,6 @@
     [self.activityGridCollectionView reloadData];
     UINavigationItem *navItem = self.parentViewController.parentViewController.navigationItem;
     navItem.title = [self.currentUser fullName];
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    if ([self.currentUser.readingLog integerValue] == 900) {
-        Activity *userActivity = [self.currentUser.activityGrid objectAtIndex:12];
-        if (!userActivity.activity) {
-            userActivity.activity = YES;
-            [self activityGridCell:nil
-           didSelectItemWithAction:ActivityCompleted
-                         cellIndex:@"12"
-                  userActivityInfo:userActivity];
-        }
-    }
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -162,13 +136,8 @@
         UILabel *header = [[UILabel alloc] initWithFrame:frame];
         [header setLineBreakMode:NSLineBreakByWordWrapping];
         [header setNumberOfLines:0];
-        [header setText:@"Complete any 5 squares in a row to win prizes."];
+        [header setText:@"Complete any 4 squares in a row to win prizes."];
         [reusableview addSubview:header];
-        return reusableview;
-    }
-    else if (kind == UICollectionElementKindSectionFooter) {
-        PrizesFooterView *reusableview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"PrizesFooterView" forIndexPath:indexPath];
-//        [reusableview setupViewWithPrizeType:self.prizesForUser userPrizeStatus:self.currentUser.prizes];
         return reusableview;
     }
     return nil;

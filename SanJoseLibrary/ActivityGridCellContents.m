@@ -10,18 +10,20 @@
 
 @interface ActivityGridCellContents ()
 
-@property (nonatomic, strong) NSString *internalDescription;
+//@property (nonatomic, strong) NSString *internalDescription;
 
 @end
 
-@implementation ActivityGridCellContents
+@implementation ActivityGridCellContents {
+    NSString *internalDescription;
+}
 
 -(void)setDescription:(NSString *)description {
-    self.internalDescription = description;
+    internalDescription = description;
 }
 
 -(NSString *)description {
-    return self.internalDescription;
+    return internalDescription;
 }
 
 -(NSURL *)url
@@ -29,14 +31,17 @@
     if (_url) {
         return _url;
     }
-    NSDataDetector *links = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink
-                                                            error:nil];
-    NSArray *linkArray = [links matchesInString:self.description
-                                        options:0
-                                          range:NSMakeRange(0, self.description.length)];
-    
-    _url = [[linkArray firstObject] URL];
-    return _url;
+    if (self.description) {
+        NSDataDetector *links = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink
+                                                                error:nil];
+        NSArray *linkArray = [links matchesInString:self.description
+                                            options:0
+                                              range:NSMakeRange(0, self.description.length)];
+        
+        _url = [[linkArray firstObject] URL];
+        return _url;
+    }
+    return nil;
 }
 
 @end

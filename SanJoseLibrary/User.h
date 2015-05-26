@@ -12,6 +12,10 @@
 @protocol Activity;
 @class Activity;
 
+static NSInteger const ReadingMinutesInterval;
+static NSInteger const MaxReadingMinutes;
+static NSInteger const MinReadingMinutes;
+
 @interface User : NSObject
 
 @property (nonatomic, strong) NSString *id;
@@ -25,5 +29,8 @@
 
 -(NSString *)fullName;
 -(void)incrementReadingLog;
+-(void)decrementReadingLog;
+-(NSInteger)nextDesignIndex;
+
 -(void)updateActivity:(Activity *)userActivity atIndex:(NSInteger)cellIndex;
 @end

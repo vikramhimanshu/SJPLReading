@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3E1E8D11B0A39B300191507 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E1E8D01B0A39B300191507 /* background.png */; };
+		A3D7617C1B10E7660086064E /* GRID_ENERGIZE_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761741B10E7660086064E /* GRID_ENERGIZE_0.png */; };
+		A3D7617D1B10E7660086064E /* GRID_ENERGIZE_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761751B10E7660086064E /* GRID_ENERGIZE_1.png */; };
+		A3D7617E1B10E7660086064E /* GRID_DISCOVER_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761761B10E7660086064E /* GRID_DISCOVER_0.png */; };
+		A3D7617F1B10E7660086064E /* GRID_DISCOVER_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761771B10E7660086064E /* GRID_DISCOVER_1.png */; };
+		A3D761801B10E7660086064E /* GRID_LEARN_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761781B10E7660086064E /* GRID_LEARN_0.png */; };
+		A3D761811B10E7660086064E /* GRID_LEARN_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761791B10E7660086064E /* GRID_LEARN_1.png */; };
+		A3D761821B10E7660086064E /* GRID_READ_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7617A1B10E7660086064E /* GRID_READ_0.png */; };
+		A3D761831B10E7660086064E /* GRID_READ_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7617B1B10E7660086064E /* GRID_READ_1.png */; };
+		A3D761871B10EBCB0086064E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761841B10EBCB0086064E /* background.png */; };
+		A3D761881B10EBCB0086064E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761851B10EBCB0086064E /* background@2x.png */; };
+		A3D761891B10EBCB0086064E /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761861B10EBCB0086064E /* background@3x.png */; };
+		A3D761931B10FCF40086064E /* +20.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618A1B10FCF40086064E /* +20.png */; };
+		A3D761941B10FCF40086064E /* CHECKMARK.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618B1B10FCF40086064E /* CHECKMARK.png */; };
+		A3D761951B10FCF40086064E /* Design1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618C1B10FCF40086064E /* Design1.png */; };
+		A3D761961B10FCF40086064E /* Design2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618D1B10FCF40086064E /* Design2.png */; };
+		A3D761971B10FCF40086064E /* Design3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618E1B10FCF40086064E /* Design3.png */; };
+		A3D761981B10FCF40086064E /* Design4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618F1B10FCF40086064E /* Design4.png */; };
+		A3D761991B10FCF40086064E /* Design5.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761901B10FCF40086064E /* Design5.png */; };
+		A3D7619A1B10FCF40086064E /* read_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761911B10FCF40086064E /* read_background.png */; };
+		A3D7619B1B10FCF40086064E /* -20.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761921B10FCF40086064E /* -20.png */; };
+		A3D7619F1B138CB40086064E /* PrizesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7619E1B138CB40086064E /* PrizesViewController.m */; };
 		A3E1E8D41B0A3B6500191507 /* UIColor+SJPLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1E8D31B0A3B6500191507 /* UIColor+SJPLColors.m */; };
 		C241FFFF191D8CEB00C914AA /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C241FFFE191D8CEB00C914AA /* EmptySegue.m */; };
-		C2483506192EA10600539C98 /* GRID_ROBOT_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2483421192EA10600539C98 /* GRID_ROBOT_0.jpg */; };
-		C2483508192EA10600539C98 /* GRID_ROBOT_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2483423192EA10600539C98 /* GRID_ROBOT_1.jpg */; };
-		C2483509192EA10600539C98 /* GRID_EXPLORE_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2483424192EA10600539C98 /* GRID_EXPLORE_0.jpg */; };
-		C248350B192EA10600539C98 /* GRID_EXPLORE_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2483426192EA10600539C98 /* GRID_EXPLORE_1.jpg */; };
-		C248350C192EA10600539C98 /* GRID_ENERGIZE_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2483427192EA10600539C98 /* GRID_ENERGIZE_0.jpg */; };
-		C248350E192EA10600539C98 /* GRID_ENERGIZE_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2483429192EA10600539C98 /* GRID_ENERGIZE_1.jpg */; };
-		C248350F192EA10600539C98 /* GRID_LEARN_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C248342A192EA10600539C98 /* GRID_LEARN_0.jpg */; };
-		C2483511192EA10600539C98 /* GRID_LEARN_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C248342C192EA10600539C98 /* GRID_LEARN_1.jpg */; };
-		C2483512192EA10600539C98 /* GRID_READ_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C248342D192EA10600539C98 /* GRID_READ_0.jpg */; };
-		C2483514192EA10600539C98 /* GRID_READ_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C248342F192EA10600539C98 /* GRID_READ_1.jpg */; };
 		C2483515192EA10600539C98 /* PRIZES_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = C2483430192EA10600539C98 /* PRIZES_1_0.png */; };
 		C2483516192EA10600539C98 /* PRIZES_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2483431192EA10600539C98 /* PRIZES_1_1.png */; };
 		C2483518192EA10600539C98 /* PRIZES_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = C2483433192EA10600539C98 /* PRIZES_2_0.png */; };
@@ -197,21 +207,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A3E1E8D01B0A39B300191507 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		A3D761741B10E7660086064E /* GRID_ENERGIZE_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_ENERGIZE_0.png; sourceTree = "<group>"; };
+		A3D761751B10E7660086064E /* GRID_ENERGIZE_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_ENERGIZE_1.png; sourceTree = "<group>"; };
+		A3D761761B10E7660086064E /* GRID_DISCOVER_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_DISCOVER_0.png; sourceTree = "<group>"; };
+		A3D761771B10E7660086064E /* GRID_DISCOVER_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_DISCOVER_1.png; sourceTree = "<group>"; };
+		A3D761781B10E7660086064E /* GRID_LEARN_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_LEARN_0.png; sourceTree = "<group>"; };
+		A3D761791B10E7660086064E /* GRID_LEARN_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_LEARN_1.png; sourceTree = "<group>"; };
+		A3D7617A1B10E7660086064E /* GRID_READ_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_READ_0.png; sourceTree = "<group>"; };
+		A3D7617B1B10E7660086064E /* GRID_READ_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_READ_1.png; sourceTree = "<group>"; };
+		A3D761841B10EBCB0086064E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		A3D761851B10EBCB0086064E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		A3D761861B10EBCB0086064E /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
+		A3D7618A1B10FCF40086064E /* +20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "+20.png"; sourceTree = "<group>"; };
+		A3D7618B1B10FCF40086064E /* CHECKMARK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CHECKMARK.png; sourceTree = "<group>"; };
+		A3D7618C1B10FCF40086064E /* Design1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design1.png; sourceTree = "<group>"; };
+		A3D7618D1B10FCF40086064E /* Design2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design2.png; sourceTree = "<group>"; };
+		A3D7618E1B10FCF40086064E /* Design3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design3.png; sourceTree = "<group>"; };
+		A3D7618F1B10FCF40086064E /* Design4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design4.png; sourceTree = "<group>"; };
+		A3D761901B10FCF40086064E /* Design5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design5.png; sourceTree = "<group>"; };
+		A3D761911B10FCF40086064E /* read_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_background.png; sourceTree = "<group>"; };
+		A3D761921B10FCF40086064E /* -20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "-20.png"; sourceTree = "<group>"; };
+		A3D7619D1B138CB40086064E /* PrizesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizesViewController.h; sourceTree = "<group>"; };
+		A3D7619E1B138CB40086064E /* PrizesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizesViewController.m; sourceTree = "<group>"; };
 		A3E1E8D21B0A3B6500191507 /* UIColor+SJPLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SJPLColors.h"; sourceTree = "<group>"; };
 		A3E1E8D31B0A3B6500191507 /* UIColor+SJPLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SJPLColors.m"; sourceTree = "<group>"; };
 		C241FFFD191D8CEB00C914AA /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptySegue.h; sourceTree = "<group>"; };
 		C241FFFE191D8CEB00C914AA /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptySegue.m; sourceTree = "<group>"; };
-		C2483421192EA10600539C98 /* GRID_ROBOT_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_ROBOT_0.jpg; sourceTree = "<group>"; };
-		C2483423192EA10600539C98 /* GRID_ROBOT_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_ROBOT_1.jpg; sourceTree = "<group>"; };
-		C2483424192EA10600539C98 /* GRID_EXPLORE_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_EXPLORE_0.jpg; sourceTree = "<group>"; };
-		C2483426192EA10600539C98 /* GRID_EXPLORE_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_EXPLORE_1.jpg; sourceTree = "<group>"; };
-		C2483427192EA10600539C98 /* GRID_ENERGIZE_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_ENERGIZE_0.jpg; sourceTree = "<group>"; };
-		C2483429192EA10600539C98 /* GRID_ENERGIZE_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_ENERGIZE_1.jpg; sourceTree = "<group>"; };
-		C248342A192EA10600539C98 /* GRID_LEARN_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_LEARN_0.jpg; sourceTree = "<group>"; };
-		C248342C192EA10600539C98 /* GRID_LEARN_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_LEARN_1.jpg; sourceTree = "<group>"; };
-		C248342D192EA10600539C98 /* GRID_READ_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_READ_0.jpg; sourceTree = "<group>"; };
-		C248342F192EA10600539C98 /* GRID_READ_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GRID_READ_1.jpg; sourceTree = "<group>"; };
 		C2483430192EA10600539C98 /* PRIZES_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRIZES_1_0.png; sourceTree = "<group>"; };
 		C2483431192EA10600539C98 /* PRIZES_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRIZES_1_1.png; sourceTree = "<group>"; };
 		C2483433192EA10600539C98 /* PRIZES_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRIZES_2_0.png; sourceTree = "<group>"; };
@@ -441,15 +462,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A3E1E8CF1B0A398B00191507 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				A3E1E8D01B0A39B300191507 /* background.png */,
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
-		C248341A192EA10600539C98 /* Activity Grid */ = {
+		A3D7619C1B10FD110086064E /* Win */ = {
 			isa = PBXGroup;
 			children = (
 				C294E17D193E842B0066AC26 /* PRIZES_1_2.png */,
@@ -457,16 +470,6 @@
 				C294E17F193E842B0066AC26 /* PRIZES_3_2.png */,
 				C294E180193E842B0066AC26 /* PRIZES_4_2.png */,
 				C294E181193E842B0066AC26 /* PRIZES_5_2.png */,
-				C2483421192EA10600539C98 /* GRID_ROBOT_0.jpg */,
-				C2483423192EA10600539C98 /* GRID_ROBOT_1.jpg */,
-				C2483424192EA10600539C98 /* GRID_EXPLORE_0.jpg */,
-				C2483426192EA10600539C98 /* GRID_EXPLORE_1.jpg */,
-				C2483427192EA10600539C98 /* GRID_ENERGIZE_0.jpg */,
-				C2483429192EA10600539C98 /* GRID_ENERGIZE_1.jpg */,
-				C248342A192EA10600539C98 /* GRID_LEARN_0.jpg */,
-				C248342C192EA10600539C98 /* GRID_LEARN_1.jpg */,
-				C248342D192EA10600539C98 /* GRID_READ_0.jpg */,
-				C248342F192EA10600539C98 /* GRID_READ_1.jpg */,
 				C2483430192EA10600539C98 /* PRIZES_1_0.png */,
 				C2483431192EA10600539C98 /* PRIZES_1_1.png */,
 				C2483433192EA10600539C98 /* PRIZES_2_0.png */,
@@ -477,20 +480,55 @@
 				C248343A192EA10600539C98 /* PRIZES_4_1.png */,
 				C248343C192EA10600539C98 /* PRIZES_5_0.png */,
 				C248343D192EA10600539C98 /* PRIZES_5_1.png */,
-				C248343F192EA10600539C98 /* Robot Battery */,
 			);
-			name = "Activity Grid";
+			name = Win;
 			path = "SRC App 2";
 			sourceTree = "<group>";
 		};
-		C248343F192EA10600539C98 /* Robot Battery */ = {
+		A3E1E8CF1B0A398B00191507 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A3D761841B10EBCB0086064E /* background.png */,
+				A3D761851B10EBCB0086064E /* background@2x.png */,
+				A3D761861B10EBCB0086064E /* background@3x.png */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		C248341A192EA10600539C98 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				A3D761741B10E7660086064E /* GRID_ENERGIZE_0.png */,
+				A3D761751B10E7660086064E /* GRID_ENERGIZE_1.png */,
+				A3D761761B10E7660086064E /* GRID_DISCOVER_0.png */,
+				A3D761771B10E7660086064E /* GRID_DISCOVER_1.png */,
+				A3D761781B10E7660086064E /* GRID_LEARN_0.png */,
+				A3D761791B10E7660086064E /* GRID_LEARN_1.png */,
+				A3D7617A1B10E7660086064E /* GRID_READ_0.png */,
+				A3D7617B1B10E7660086064E /* GRID_READ_1.png */,
+			);
+			name = Play;
+			path = "SRC App 2";
+			sourceTree = "<group>";
+		};
+		C248343F192EA10600539C98 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				A3D7618A1B10FCF40086064E /* +20.png */,
+				A3D7618B1B10FCF40086064E /* CHECKMARK.png */,
+				A3D7618C1B10FCF40086064E /* Design1.png */,
+				A3D7618D1B10FCF40086064E /* Design2.png */,
+				A3D7618E1B10FCF40086064E /* Design3.png */,
+				A3D7618F1B10FCF40086064E /* Design4.png */,
+				A3D761901B10FCF40086064E /* Design5.png */,
+				A3D761911B10FCF40086064E /* read_background.png */,
+				A3D761921B10FCF40086064E /* -20.png */,
 				C29A2BAB192475D9000CE3DF /* APP Battery OFF */,
 				C29A2B4F1924757C000CE3DF /* APP Battery ON */,
 				C248349C192EA10600539C98 /* APP ROBOT ON */,
 			);
-			path = "Robot Battery";
+			name = Read;
+			path = "SRC App 2/Robot Battery";
 			sourceTree = "<group>";
 		};
 		C248349C192EA10600539C98 /* APP ROBOT ON */ = {
@@ -732,8 +770,10 @@
 		C29A2BAA19247598000CE3DF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C248343F192EA10600539C98 /* Read */,
+				A3D7619C1B10FD110086064E /* Win */,
 				A3E1E8CF1B0A398B00191507 /* Common */,
-				C248341A192EA10600539C98 /* Activity Grid */,
+				C248341A192EA10600539C98 /* Play */,
 				C294E187193E84610066AC26 /* SelectMember */,
 				C254855E192BE0330007DFC6 /* Information Screen Assets */,
 			);
@@ -830,6 +870,8 @@
 				C2981F74192034A300DEBA0D /* ActivityGridCell.m */,
 				C254854A192BBB7B0007DFC6 /* PrizesFooterView.h */,
 				C254854B192BBB7B0007DFC6 /* PrizesFooterView.m */,
+				A3D7619D1B138CB40086064E /* PrizesViewController.h */,
+				A3D7619E1B138CB40086064E /* PrizesViewController.m */,
 			);
 			name = "Activity Controller";
 			sourceTree = "<group>";
@@ -915,11 +957,10 @@
 			files = (
 				C2CCFC2D1939B18900FEB1B6 /* APP_BATTERY_ON-08.png in Resources */,
 				C2CCFC2B1939B18900FEB1B6 /* APP_BATTERY_ON-06.png in Resources */,
+				A3D761831B10E7660086064E /* GRID_READ_1.png in Resources */,
 				C24FDF4A19195819009C7A9A /* Images.xcassets in Resources */,
-				C248350C192EA10600539C98 /* GRID_ENERGIZE_0.jpg in Resources */,
 				C2CCFC461939B18900FEB1B6 /* APP_BATTERY_ON-33.png in Resources */,
 				C2CCFBF41939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png in Resources */,
-				C248350B192EA10600539C98 /* GRID_EXPLORE_1.jpg in Resources */,
 				C254855B192BE0190007DFC6 /* PRE-READER.png in Resources */,
 				C2CCFC431939B18900FEB1B6 /* APP_BATTERY_ON-30.png in Resources */,
 				C2CCFC441939B18900FEB1B6 /* APP_BATTERY_ON-31.png in Resources */,
@@ -931,18 +972,17 @@
 				C29A2BE3192475D9000CE3DF /* APP_BATTERY_OFF-11.png in Resources */,
 				C2CCFBDC1939B12A00FEB1B6 /* APP_BATTERY_OFF-17.png in Resources */,
 				C2CCFC421939B18900FEB1B6 /* APP_BATTERY_ON-29.png in Resources */,
-				C2483512192EA10600539C98 /* GRID_READ_0.jpg in Resources */,
 				C2483518192EA10600539C98 /* PRIZES_2_0.png in Resources */,
+				A3D761991B10FCF40086064E /* Design5.png in Resources */,
 				C2CCFBDA1939B12A00FEB1B6 /* APP_BATTERY_OFF-15.png in Resources */,
+				A3D761891B10EBCB0086064E /* background@3x.png in Resources */,
 				C2CCFBE11939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png in Resources */,
-				C248350E192EA10600539C98 /* GRID_ENERGIZE_1.jpg in Resources */,
 				C2CCFBF01939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png in Resources */,
-				C2483514192EA10600539C98 /* GRID_READ_1.jpg in Resources */,
 				C2548541192AA2C80007DFC6 /* read.png in Resources */,
 				C254855D192BE0190007DFC6 /* STAFF SJPL.png in Resources */,
 				C2CCFC271939B18900FEB1B6 /* APP_BATTERY_ON-02.png in Resources */,
 				C2CCFC3B1939B18900FEB1B6 /* APP_BATTERY_ON-22.png in Resources */,
-				C2483506192EA10600539C98 /* GRID_ROBOT_0.jpg in Resources */,
+				A3D7617E1B10E7660086064E /* GRID_DISCOVER_0.png in Resources */,
 				C2CCFBEE1939B12A00FEB1B6 /* APP_BATTERY_OFF-35.png in Resources */,
 				C2CCFC4E1939B18900FEB1B6 /* APP_BATTERY_ON-41.png in Resources */,
 				C2CCFBF31939B12A00FEB1B6 /* APP_BATTERY_OFF-40.png in Resources */,
@@ -957,7 +997,6 @@
 				C2CCFBF11939B12A00FEB1B6 /* APP_BATTERY_OFF-38.png in Resources */,
 				C2548542192AA2C80007DFC6 /* help-iPhone.html in Resources */,
 				C29A2BE1192475D9000CE3DF /* APP_BATTERY_OFF-09.png in Resources */,
-				C2483508192EA10600539C98 /* GRID_ROBOT_1.jpg in Resources */,
 				C2548543192AA2C80007DFC6 /* explore.png in Resources */,
 				C2CCFC391939B18900FEB1B6 /* APP_BATTERY_ON-20.png in Resources */,
 				C2CCFBE21939B12A00FEB1B6 /* APP_BATTERY_OFF-23.png in Resources */,
@@ -969,13 +1008,15 @@
 				C2CCFC4A1939B18900FEB1B6 /* APP_BATTERY_ON-37.png in Resources */,
 				C2CCFBEB1939B12A00FEB1B6 /* APP_BATTERY_OFF-32.png in Resources */,
 				C2CCFC501939B18900FEB1B6 /* APP_BATTERY_ON-43.png in Resources */,
+				A3D761821B10E7660086064E /* GRID_READ_0.png in Resources */,
 				C2548546192AA2C80007DFC6 /* learn.png in Resources */,
 				C2CCFC3F1939B18900FEB1B6 /* APP_BATTERY_ON-26.png in Resources */,
 				C2CCFC4F1939B18900FEB1B6 /* APP_BATTERY_ON-42.png in Resources */,
-				C2483511192EA10600539C98 /* GRID_LEARN_1.jpg in Resources */,
 				C2CCFBF61939B12A00FEB1B6 /* APP_BATTERY_OFF-43.png in Resources */,
+				A3D761941B10FCF40086064E /* CHECKMARK.png in Resources */,
 				C2CCFC3D1939B18900FEB1B6 /* APP_BATTERY_ON-24.png in Resources */,
 				C2CCFBE41939B12A00FEB1B6 /* APP_BATTERY_OFF-25.png in Resources */,
+				A3D761881B10EBCB0086064E /* background@2x.png in Resources */,
 				C2CCFC321939B18900FEB1B6 /* APP_BATTERY_ON-13.png in Resources */,
 				C2CCFC3A1939B18900FEB1B6 /* APP_BATTERY_ON-21.png in Resources */,
 				C2CCFC331939B18900FEB1B6 /* APP_BATTERY_ON-14.png in Resources */,
@@ -983,12 +1024,14 @@
 				C2CCFC401939B18900FEB1B6 /* APP_BATTERY_ON-27.png in Resources */,
 				C24FDF3C19195819009C7A9A /* Main_iPhone.storyboard in Resources */,
 				C248351C192EA10600539C98 /* PRIZES_3_1.png in Resources */,
+				A3D761801B10E7660086064E /* GRID_LEARN_0.png in Resources */,
 				C2CCFBEC1939B12A00FEB1B6 /* APP_BATTERY_OFF-33.png in Resources */,
 				C294E183193E842B0066AC26 /* PRIZES_2_2.png in Resources */,
 				C2CCFBF71939B12A00FEB1B6 /* APP_BATTERY_OFF-44.png in Resources */,
 				C2CCFBE51939B12A00FEB1B6 /* APP_BATTERY_OFF-26.png in Resources */,
 				C29A2BDC192475D9000CE3DF /* APP_BATTERY_OFF-04.png in Resources */,
 				C2CCFC3C1939B18900FEB1B6 /* APP_BATTERY_ON-23.png in Resources */,
+				A3D7617D1B10E7660086064E /* GRID_ENERGIZE_1.png in Resources */,
 				C2548558192BE0190007DFC6 /* Header Bar.png in Resources */,
 				C248357E192EA10600539C98 /* APP Robot ON-01.png in Resources */,
 				C248351E192EA10600539C98 /* PRIZES_4_0.png in Resources */,
@@ -1001,49 +1044,57 @@
 				C24FDF3319195819009C7A9A /* InfoPlist.strings in Resources */,
 				C2CCFC3E1939B18900FEB1B6 /* APP_BATTERY_ON-25.png in Resources */,
 				C29A2BDD192475D9000CE3DF /* APP_BATTERY_OFF-05.png in Resources */,
-				C248350F192EA10600539C98 /* GRID_LEARN_0.jpg in Resources */,
 				C2483521192EA10600539C98 /* PRIZES_5_0.png in Resources */,
 				C2CCFBE01939B12A00FEB1B6 /* APP_BATTERY_OFF-21.png in Resources */,
 				C254855A192BE0190007DFC6 /* TEEN.png in Resources */,
+				A3D761871B10EBCB0086064E /* background.png in Resources */,
 				C2548557192BE0190007DFC6 /* ADULT.png in Resources */,
 				C2CCFC2A1939B18900FEB1B6 /* APP_BATTERY_ON-05.png in Resources */,
 				C2483519192EA10600539C98 /* PRIZES_2_1.png in Resources */,
 				C294E185193E842B0066AC26 /* PRIZES_4_2.png in Resources */,
 				C2CCFBDF1939B12A00FEB1B6 /* APP_BATTERY_OFF-20.png in Resources */,
 				C2CCFBDD1939B12A00FEB1B6 /* APP_BATTERY_OFF-18.png in Resources */,
-				C2483509192EA10600539C98 /* GRID_EXPLORE_0.jpg in Resources */,
 				C2CCFC491939B18900FEB1B6 /* APP_BATTERY_ON-36.png in Resources */,
 				C2CCFBF21939B12A00FEB1B6 /* APP_BATTERY_OFF-39.png in Resources */,
 				C294E186193E842B0066AC26 /* PRIZES_5_2.png in Resources */,
 				C2CCFBE61939B12A00FEB1B6 /* APP_BATTERY_OFF-27.png in Resources */,
+				A3D7617F1B10E7660086064E /* GRID_DISCOVER_1.png in Resources */,
 				C2CCFC521939B18900FEB1B6 /* APP_BATTERY_ON-45.png in Resources */,
 				C294E182193E842B0066AC26 /* PRIZES_1_2.png in Resources */,
 				C2CCFBE71939B12A00FEB1B6 /* APP_BATTERY_OFF-28.png in Resources */,
 				C2CCFC371939B18900FEB1B6 /* APP_BATTERY_ON-18.png in Resources */,
 				C29A2BE5192475D9000CE3DF /* APP_BATTERY_OFF-13.png in Resources */,
+				A3D761961B10FCF40086064E /* Design2.png in Resources */,
 				C2CCFC291939B18900FEB1B6 /* APP_BATTERY_ON-04.png in Resources */,
 				C2CCFC261939B18900FEB1B6 /* APP_BATTERY_ON-01.png in Resources */,
 				C2CCFC351939B18900FEB1B6 /* APP_BATTERY_ON-16.png in Resources */,
 				C2CCFBED1939B12A00FEB1B6 /* APP_BATTERY_OFF-34.png in Resources */,
 				C2CCFC4D1939B18900FEB1B6 /* APP_BATTERY_ON-40.png in Resources */,
 				C294E184193E842B0066AC26 /* PRIZES_3_2.png in Resources */,
+				A3D7619A1B10FCF40086064E /* read_background.png in Resources */,
 				C29A2BE4192475D9000CE3DF /* APP_BATTERY_OFF-12.png in Resources */,
 				C2CCFC4B1939B18900FEB1B6 /* APP_BATTERY_ON-38.png in Resources */,
 				C2CCFC2F1939B18900FEB1B6 /* APP_BATTERY_ON-10.png in Resources */,
 				C2CCFC311939B18900FEB1B6 /* APP_BATTERY_ON-12.png in Resources */,
 				C29A2BE2192475D9000CE3DF /* APP_BATTERY_OFF-10.png in Resources */,
 				C2CCFC471939B18900FEB1B6 /* APP_BATTERY_ON-34.png in Resources */,
+				A3D761811B10E7660086064E /* GRID_LEARN_1.png in Resources */,
 				C2CCFC4C1939B18900FEB1B6 /* APP_BATTERY_ON-39.png in Resources */,
 				C2483516192EA10600539C98 /* PRIZES_1_1.png in Resources */,
+				A3D761931B10FCF40086064E /* +20.png in Resources */,
 				C29A2BDA192475D9000CE3DF /* APP_BATTERY_OFF-02.png in Resources */,
 				C2CCFC281939B18900FEB1B6 /* APP_BATTERY_ON-03.png in Resources */,
+				A3D761951B10FCF40086064E /* Design1.png in Resources */,
+				A3D7619B1B10FCF40086064E /* -20.png in Resources */,
 				C2CCFC511939B18900FEB1B6 /* APP_BATTERY_ON-44.png in Resources */,
 				C29A2BDF192475D9000CE3DF /* APP_BATTERY_OFF-07.png in Resources */,
 				C2CCFC361939B18900FEB1B6 /* APP_BATTERY_ON-17.png in Resources */,
 				C2CCFBE31939B12A00FEB1B6 /* APP_BATTERY_OFF-24.png in Resources */,
 				C29A2BDE192475D9000CE3DF /* APP_BATTERY_OFF-06.png in Resources */,
+				A3D7617C1B10E7660086064E /* GRID_ENERGIZE_0.png in Resources */,
+				A3D761981B10FCF40086064E /* Design4.png in Resources */,
+				A3D761971B10FCF40086064E /* Design3.png in Resources */,
 				C2483515192EA10600539C98 /* PRIZES_1_0.png in Resources */,
-				A3E1E8D11B0A39B300191507 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1064,6 +1115,7 @@
 			files = (
 				C24FDF6F1919922F009C7A9A /* Account.m in Sources */,
 				C2DEEC4E1922CBB50003495B /* ActivityGrids.m in Sources */,
+				A3D7619F1B138CB40086064E /* PrizesViewController.m in Sources */,
 				C254854F192BCD810007DFC6 /* PrizeTypes.m in Sources */,
 				C283E3FF191AAD35008B66DB /* NSObject+Properties.m in Sources */,
 				C283E409191AD1FD008B66DB /* Activity.m in Sources */,

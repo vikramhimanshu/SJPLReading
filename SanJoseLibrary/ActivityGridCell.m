@@ -24,7 +24,7 @@
     self.activityCellData = activityCellData;
     
     NSString *img = [NSString stringWithFormat:@"GRID_%@_%d",activityCellData.gridIcon,activity.activity];
-    img = [img stringByAppendingPathExtension:@"jpg"];
+//    img = [img stringByAppendingPathExtension:@"jpg"];
     [self.imageView setImage:[UIImage imageNamed:img]];
 }
 
@@ -52,17 +52,20 @@
             alert = [[UIAlertView alloc] initWithTitle:@"Activity"
                                            message:self.activityCellData.description
                                           delegate:self
-                                 cancelButtonTitle:@"I'll do it later" otherButtonTitles:@"I did it",@"Open URL",nil];
+                                 cancelButtonTitle:@"I'll do it later" otherButtonTitles:@"Open URL",@"I did it",nil];
         }else {
             alert = [Utillities alertViewWithTitle:@"Activity"
                                            message:self.activityCellData.description
                                           delegate:self
                                  cancelButtonTitle:@"I'll do it later" otherButtonTitles:@"I did it",nil];
         }
-        
+        NSString *placeholderString = @"Enter activity notes (optional)";
+        if ([self.activityCellData.whatDidIDo length]) {
+            placeholderString = [NSString stringWithFormat:@"%@ (optional)",self.activityCellData.whatDidIDo];
+        }
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         [alert textFieldAtIndex:0].text = self.userActivity.notes;
-        [[alert textFieldAtIndex:0] setPlaceholder:@"Enter activity notes (optional)"];
+        [[alert textFieldAtIndex:0] setPlaceholder:placeholderString];
         alert.tag = 2;
     }
     [alert show];
@@ -85,7 +88,7 @@
         action = ActivityDelayed;
         self.userActivity.activity = NO;
     }
-    else if (buttonIndex == 2)
+    else if (buttonIndex == 1)
     {
         if ([[UIApplication sharedApplication] canOpenURL:self.activityCellData.url]) {
             [[UIApplication sharedApplication] openURL:self.activityCellData.url];
