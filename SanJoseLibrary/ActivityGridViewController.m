@@ -19,6 +19,7 @@
 #import "PrizeTypes.h"
 #import "Prize.h"
 #import "NSObject+JSONObject.h"
+#import "Utillities.h"
 
 @interface ActivityGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate, ActivityGridCellDelegate>
 
@@ -115,12 +116,15 @@
                                               dispatch_async(dispatch_get_main_queue(), ^{
                                                   
                                                   [self.currentUser updateActivity:userActivityInfo atIndex:[cellIndex integerValue]];
+                                                  [self.activityGridCollectionView reloadItemsAtIndexPaths:@[ip]];
                                                   
                                                   if (prizesViewNeedsRefresh)
-                                                      [self.activityGridCollectionView reloadData];
-                                                  else
-                                                      [self.activityGridCollectionView reloadItemsAtIndexPaths:@[ip]];
-                                                  
+                                                  {
+                                                      [Utillities showAlertWithTitle:@"Congratulations!"
+                                                                             message:@"You've won a prize!!\nPlease log on to sjplsummer.org to see when you have earned prizes or visit your local San José Public Library."
+                                                                            delegate:self
+                                                                   cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                                                  }
                                               });
                                           }];
 }

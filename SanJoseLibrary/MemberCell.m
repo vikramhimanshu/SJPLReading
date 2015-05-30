@@ -32,7 +32,8 @@
     self.userTypes = types;
     self.userName.text = [user fullName];
     [self setBackgroundColor:[types colorForUserType:user.userType]];
-    self.userTypeImageView.image = [UIImage imageNamed:[types nameForUserType:user.userType]];
+    NSString *imageName = [types nameForUserType:user.userType];
+    self.userTypeImageView.image = [UIImage imageNamed:[imageName lowercaseString]];
 }
 
 @end

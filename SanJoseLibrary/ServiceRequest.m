@@ -382,6 +382,8 @@ static ServiceRequest *sharedInstance;
                                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
                                           {
                                               NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                              NSString *dataString = [NSString stringWithUTF8String:[data bytes]];
+                                              NSLog(@"%@",dataString);
                                               self.account.authToken = json[@"authToken"];
                                               if (self.account.authToken && [self.account.authToken length]) {
                                                   self.account = [[Account alloc] initWithJSONProperties:json[@"account"]];

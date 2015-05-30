@@ -11,6 +11,7 @@
 #import "User.h"
 #import "ReadingLogCell.h"
 #import "ServiceRequest.h"
+#import "Utillities.h"
 
 @interface ReadingLogViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate>
 
@@ -23,6 +24,8 @@
 
 @property (nonatomic) BOOL shouldShowNextDesign;
 @property (nonatomic) NSInteger currentReadingTracker;
+
+@property (nonatomic) UINavigationItem* myNavigationItem;
 
 @end
 
@@ -43,52 +46,87 @@
     [super viewDidLoad];
     
     self.currentUser = [(ContainerViewController *)self.parentViewController currentUser];
+
+    self.batteryFullImageView.hidden = YES;
     
+    [self setupReadingLogCollectionView];
+    [self setupReadingLogCollectionViewCells];
+}
+
+- (void)setupReadingLogCollectionView
+{
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"read_background"]];
     [backgroundView setContentMode:UIViewContentModeScaleAspectFill];
     self.readingLogCollectionView.backgroundView = backgroundView;
-    
-    self.readingLogCollectionViewCells = [[NSMutableArray alloc] initWithCapacity:23];
+}
+
+- (void)setupReadingLogCollectionViewCells
+{
+    self.readingLogCollectionViewCells = [[NSMutableArray alloc] initWithCapacity:30];
+    NSInteger numberOfReadCells = self.currentReadingTracker/20;
+    self.currentIndexPath = [NSIndexPath indexPathForItem:numberOfReadCells
+                                                inSection:0];
     for (int i =0; i<[self.readingLogCollectionView numberOfItemsInSection:0]; i++)
     {
         @autoreleasepool {
-            NSIndexPath *ip = [NSIndexPath indexPathForItem:i inSection:0];
+            NSIndexPath *idxPath = [NSIndexPath indexPathForItem:i inSection:0];
             ReadingLogCell *cell = [self.readingLogCollectionView dequeueReusableCellWithReuseIdentifier:@"readingLogCell"
-                                                                                            forIndexPath:ip];
+                                                                                        forIndexPath:idxPath];
+            if (i < numberOfReadCells) {
+                cell.imageView.image = [UIImage imageNamed:@"CHECKMARK"];
+            }
             [self.readingLogCollectionViewCells addObject:cell];
         }
     }
-    self.batteryFullImageView.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    UIBarButtonItem *chargeBattery = [[UIBarButtonItem alloc] initWithTitle:@"+20 Mins"
-                                                                      style:UIBarButtonItemStyleDone
-                                                                     target:self
-                                                                     action:@selector(updateReadingLog:)];
-    UINavigationItem *navItem = self.parentViewController.parentViewController.navigationItem;
-    [navItem setRightBarButtonItem:chargeBattery animated:YES];
-    [navItem setTitle:@"I read for "];
-    
+    [self createRightNavigationItem];
     [self.readingLogCollectionView reloadData];
+    [self checkForReadingMileStones];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    UINavigationItem *navItem = self.parentViewController.parentViewController.navigationItem;
+    UINavigationItem *navItem = self.myNavigationItem;
     [navItem setRightBarButtonItem:nil animated:YES];
     [navItem setTitle:@""];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(UINavigationItem *)myNavigationItem
 {
-    [super viewDidAppear:animated];
-    if ([self.currentUser.readingLog integerValue] > 0) {
-        [self updateCellAtIndexPath:self.currentIndexPath];
-    }
+    return self.parentViewController.parentViewController.navigationItem;
+}
+
+- (void)createRightNavigationItem
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 33)];
+    
+    UIButton *addMinsButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [addMinsButton setTitle:@"+20m" forState:UIControlStateNormal];
+    addMinsButton.frame = CGRectMake(0, 0, 50, 30);
+    [addMinsButton addTarget:self
+                      action:@selector(addReadingMinutes)
+            forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *subMinsButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    subMinsButton.frame = CGRectMake(55, 0, 45, 30);
+    [subMinsButton setTitle:@"-20m" forState:UIControlStateNormal];
+    [subMinsButton setTintColor:[UIColor redColor]];
+    [subMinsButton addTarget:self
+                      action:@selector(subtractReadingMinutes)
+            forControlEvents:UIControlEventTouchUpInside];
+
+    [view addSubview:addMinsButton];
+    [view addSubview:subMinsButton];
+    
+    UIBarButtonItem *rightNavigationItemView = [[UIBarButtonItem alloc] initWithCustomView:view];
+    UINavigationItem *navItem = self.myNavigationItem;
+    [navItem setRightBarButtonItem:rightNavigationItemView animated:YES];
+    [navItem setTitle:@"I read for"];
 }
 
 -(BOOL)shouldShowNextDesign
@@ -113,73 +151,89 @@
     return _currentIndexPath;
 }
 
--(void)updateIndexPath
+-(void)decrementIndexPath
 {
-    NSUInteger idx = self.currentIndexPath.item;
-    if (idx < [self.readingLogCollectionView numberOfItemsInSection:0]) {
-        self.currentIndexPath = [NSIndexPath indexPathForItem:idx+1
+    if (self.currentIndexPath.item > 0) {
+        NSUInteger idx = self.currentIndexPath.item - 1;
+        self.currentIndexPath = [NSIndexPath indexPathForItem:idx
                                                     inSection:self.currentIndexPath.section];
     }
 }
 
--(void)updateReadingLog:(UIBarButtonItem *)sender
+-(void)incrementIndexPath
 {
-    UIActionSheet *updateReadingLogConfirmation = [[UIActionSheet alloc] initWithTitle:@"Challenge yourself to read at least 20 minutes a day"
-                                                                              delegate:self
-                                                                     cancelButtonTitle:@"I didn't read for 20 minutes"
-                                                                destructiveButtonTitle:@"I read for 20 minutes"
-                                                                     otherButtonTitles:nil];
-    UINavigationItem *navItem = self.parentViewController.parentViewController.navigationItem;
-    [updateReadingLogConfirmation showFromBarButtonItem:navItem.rightBarButtonItem animated:YES];
-}
-
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == [actionSheet destructiveButtonIndex]) {
-        [self.currentUser incrementReadingLog];
-        [[ServiceRequest sharedRequest] updateReadingLogForUser:self.currentUser
-                                              completionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
-                                                  dispatch_sync(dispatch_get_main_queue(), ^{
-                                                      [self updateCellAtIndexPath:self.currentIndexPath];
-                                                  });
-                                              }];
+    NSUInteger idx = self.currentIndexPath.item + 1;
+    if (idx < [self.readingLogCollectionView numberOfItemsInSection:0]) {
+        self.currentIndexPath = [NSIndexPath indexPathForItem:idx
+                                                    inSection:self.currentIndexPath.section];
     }
 }
 
-- (void)updateCellAtIndexPath:(NSIndexPath *)ip
+- (void)addReadingMinutes
 {
-    NSInteger max = self.currentReadingTracker/20;
+    [self.currentUser incrementReadingLog];
+    ReadingLogCell *cell = [self.readingLogCollectionViewCells objectAtIndex:self.currentIndexPath.item];
+    cell.imageView.image = [UIImage imageNamed:@"CHECKMARK"];
+    [self updateReadingLogRemote];
+    [self incrementIndexPath];
+}
 
-    if (max >= [self.readingLogCollectionView numberOfItemsInSection:0]) {
+- (void)subtractReadingMinutes
+{
+    if (self.currentReadingTracker > 0) {
+        [self decrementIndexPath];
+        [self.currentUser decrementReadingLog];
+        ReadingLogCell *cell = [self.readingLogCollectionViewCells objectAtIndex:self.currentIndexPath.item];
+        cell.imageView.image = nil;
+        [self updateReadingLogRemote];
+    }
+}
 
-        if (self.shouldShowNextDesign) {
-            NSString *imageName = [NSString stringWithFormat:@"Design%ld",(long)[self.currentUser nextDesignIndex]];
-            self.batteryFullImageView.image = [UIImage imageNamed:imageName];
-        }
+-(void)updateReadingLogRemote
+{
+    [[ServiceRequest sharedRequest] updateReadingLogForUser:self.currentUser
+    completionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error)
+    {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self checkForReadingMileStones];
+        });
+    }];
+}
 
+- (void)updateReadingLogCollectionView
+{
+    [self.readingLogCollectionView reloadItemsAtIndexPaths:@[self.currentIndexPath]];
+}
+
+- (void)checkForReadingMileStones
+{
+    if (self.shouldShowNextDesign) {
+        NSString *imageName = [NSString stringWithFormat:@"Design%ld",(long)[self.currentUser nextDesignIndex]];
+        self.batteryFullImageView.image = [UIImage imageNamed:imageName];
         self.batteryFullImageView.hidden = NO;
         self.readingLogCollectionView.hidden = YES;
-        UINavigationItem *navItem = self.parentViewController.parentViewController.navigationItem;
-        navItem.rightBarButtonItem.enabled = NO;
-
-        return;
-    } else if (ip.item > max-1) return;
-    
-    [self.readingLogCollectionView performBatchUpdates:^
-    {
-        @autoreleasepool
-        {
-            ReadingLogCell *cell = [self.readingLogCollectionViewCells objectAtIndex:ip.item];
-            NSString *imgName = @"CHECKMARK";
-            [cell.imageView setImage:[UIImage imageNamed:imgName]];
-        }
+        self.myNavigationItem.rightBarButtonItem.enabled = NO;
     }
-                                            completion:^(BOOL finished)
+    else
     {
-        [self updateIndexPath];
-        
-        [self updateCellAtIndexPath:self.currentIndexPath];
-    }];
+        self.batteryFullImageView.hidden = YES;
+        self.readingLogCollectionView.hidden = NO;
+        self.myNavigationItem.rightBarButtonItem.enabled = YES;
+        return;
+    }
+    
+    if ([self.currentUser.readingLog integerValue] == 600) {
+        [Utillities showAlertWithTitle:@"Congratulations!"
+                               message:@"You've won a prize for completing 10 hours of reading!\nPlease log on to sjplsummer.org to see when you have earned prizes or visit your local San José Public Library."
+                              delegate:self
+                     cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    }
+//    else {
+//        [Utillities showAlertWithTitle:@"Congratulations!"
+//                               message:@"Keep tracking your reading to earn more reading badges!"
+//                              delegate:self
+//                     cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+//    }
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -199,11 +253,6 @@
         cell = [self.readingLogCollectionViewCells objectAtIndex:indexPath.item];
     }
     return cell;
-}
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self updateReadingLog:nil];
 }
 
 @end

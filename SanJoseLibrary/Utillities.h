@@ -19,4 +19,10 @@
                  cancelButtonTitle:(NSString *)cancelTitle
                  otherButtonTitles:(NSString *)otherTitles, ...;
 
++ (void)showAlertWithTitle:(NSString *)title
+                   message:(NSString *)msg
+                  delegate:(id)delegate
+         cancelButtonTitle:(NSString *)cancelTitle
+         otherButtonTitles:(NSString *)otherTitles, ...;
+
 @end

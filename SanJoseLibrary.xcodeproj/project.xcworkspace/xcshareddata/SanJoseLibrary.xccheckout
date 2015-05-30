@@ -10,31 +10,31 @@
 	<string>SanJoseLibrary</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1D995243-4AFE-4CDB-99B6-2CC5BE148379</key>
-		<string>https://github.com/vikramhimanshu/SJPLReading.git</string>
+		<key>16661985CB67A0EEE402C307CF0C875753DBE674</key>
+		<string>https://github.com/vikramhimanshu/SJPLReading</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SanJoseLibrary.xcodeproj/project.xcworkspace</string>
+	<string>SanJoseLibrary.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1D995243-4AFE-4CDB-99B6-2CC5BE148379</key>
+		<key>16661985CB67A0EEE402C307CF0C875753DBE674</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/vikramhimanshu/SJPLReading.git</string>
+	<string>https://github.com/vikramhimanshu/SJPLReading</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1D995243-4AFE-4CDB-99B6-2CC5BE148379</string>
+	<string>16661985CB67A0EEE402C307CF0C875753DBE674</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1D995243-4AFE-4CDB-99B6-2CC5BE148379</string>
+			<string>16661985CB67A0EEE402C307CF0C875753DBE674</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SanJoseLibrary</string>
+			<string>SJPL</string>
 		</dict>
 	</array>
 </dict>

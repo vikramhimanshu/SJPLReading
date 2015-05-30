@@ -10,6 +10,15 @@
 
 @implementation Utillities
 
++ (void)showAlertWithTitle:(NSString *)title
+                   message:(NSString *)msg
+                  delegate:(id)delegate
+         cancelButtonTitle:(NSString *)cancelTitle
+         otherButtonTitles:(NSString *)otherTitles, ...
+{
+    [[self alertViewWithTitle:title message:msg delegate:delegate cancelButtonTitle:cancelTitle otherButtonTitles:otherTitles, nil] show];
+}
+
 +(UIAlertView *)alertViewWithTitle:(NSString *)title
                               message:(NSString *)msg
                              delegate:(id)delegate

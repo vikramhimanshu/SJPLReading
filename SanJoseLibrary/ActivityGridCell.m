@@ -11,6 +11,10 @@
 #import "Utillities.h"
 #import "Activity.h"
 
+#define ALERT_TYPE_COMPLETE 1
+#define ALERT_TYPE_URL 2
+#define ALERT_TYPE_REGULAR 3
+
 @interface ActivityGridCell () <UIAlertViewDelegate>
 @property (nonatomic, weak) ActivityGridCellContents *activityCellData;
 @property (nonatomic, weak) Activity *userActivity;
@@ -44,7 +48,7 @@
                                        message:msg
                                       delegate:self
                              cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        alert.tag = 1;
+        alert.tag = ALERT_TYPE_COMPLETE;
     }
     else
     {
@@ -53,11 +57,13 @@
                                            message:self.activityCellData.description
                                           delegate:self
                                  cancelButtonTitle:@"I'll do it later" otherButtonTitles:@"Open URL",@"I did it",nil];
+            alert.tag = ALERT_TYPE_URL;
         }else {
             alert = [Utillities alertViewWithTitle:@"Activity"
                                            message:self.activityCellData.description
                                           delegate:self
                                  cancelButtonTitle:@"I'll do it later" otherButtonTitles:@"I did it",nil];
+            alert.tag = ALERT_TYPE_REGULAR;
         }
         NSString *placeholderString = @"Enter activity notes (optional)";
         if ([self.activityCellData.whatDidIDo length]) {
@@ -66,7 +72,6 @@
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         [alert textFieldAtIndex:0].text = self.userActivity.notes;
         [[alert textFieldAtIndex:0] setPlaceholder:placeholderString];
-        alert.tag = 2;
     }
     [alert show];
 }
@@ -81,18 +86,35 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (alertView.tag==1) return;
-    
     UserActivityAction action;
+    switch (alertView.tag)
+    {
+        case ALERT_TYPE_COMPLETE:
+            return;
+            break;
+            
+        case ALERT_TYPE_REGULAR:
+            
+            break;
+            
+        case ALERT_TYPE_URL:
+            if (buttonIndex == 1)
+            {
+                if ([[UIApplication sharedApplication] canOpenURL:self.activityCellData.url]) {
+                    [[UIApplication sharedApplication] openURL:self.activityCellData.url];
+                }
+            }
+            return;
+            break;
+            
+        default:
+            return;
+            break;
+    }
+    
     if (buttonIndex == [alertView cancelButtonIndex]) {
         action = ActivityDelayed;
         self.userActivity.activity = NO;
-    }
-    else if (buttonIndex == 1)
-    {
-        if ([[UIApplication sharedApplication] canOpenURL:self.activityCellData.url]) {
-            [[UIApplication sharedApplication] openURL:self.activityCellData.url];
-        }
     }
     else
     {

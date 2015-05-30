@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3CFFAAE1B1985BE000B45F6 /* header bar.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFFAAD1B1985BE000B45F6 /* header bar.png */; };
 		A3D7617C1B10E7660086064E /* GRID_ENERGIZE_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761741B10E7660086064E /* GRID_ENERGIZE_0.png */; };
 		A3D7617D1B10E7660086064E /* GRID_ENERGIZE_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761751B10E7660086064E /* GRID_ENERGIZE_1.png */; };
 		A3D7617E1B10E7660086064E /* GRID_DISCOVER_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761761B10E7660086064E /* GRID_DISCOVER_0.png */; };
@@ -65,12 +66,11 @@
 		C2548549192ABB9B0007DFC6 /* NewMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2548548192ABB9B0007DFC6 /* NewMemberViewController.m */; };
 		C254854C192BBB7B0007DFC6 /* PrizesFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C254854B192BBB7B0007DFC6 /* PrizesFooterView.m */; };
 		C254854F192BCD810007DFC6 /* PrizeTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = C254854E192BCD810007DFC6 /* PrizeTypes.m */; };
-		C2548557192BE0190007DFC6 /* ADULT.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548550192BE0190007DFC6 /* ADULT.png */; };
-		C2548558192BE0190007DFC6 /* Header Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548551192BE0190007DFC6 /* Header Bar.png */; };
-		C2548559192BE0190007DFC6 /* READER.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548552192BE0190007DFC6 /* READER.png */; };
-		C254855A192BE0190007DFC6 /* TEEN.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548553192BE0190007DFC6 /* TEEN.png */; };
-		C254855B192BE0190007DFC6 /* PRE-READER.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548554192BE0190007DFC6 /* PRE-READER.png */; };
-		C254855D192BE0190007DFC6 /* STAFF SJPL.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548556192BE0190007DFC6 /* STAFF SJPL.png */; };
+		C2548557192BE0190007DFC6 /* adult.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548550192BE0190007DFC6 /* adult.png */; };
+		C2548559192BE0190007DFC6 /* reader.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548552192BE0190007DFC6 /* reader.png */; };
+		C254855A192BE0190007DFC6 /* teen.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548553192BE0190007DFC6 /* teen.png */; };
+		C254855B192BE0190007DFC6 /* pre-reader.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548554192BE0190007DFC6 /* pre-reader.png */; };
+		C254855D192BE0190007DFC6 /* staff sjpl.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548556192BE0190007DFC6 /* staff sjpl.png */; };
 		C2548561192D19660007DFC6 /* PersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C2548560192D19660007DFC6 /* PersistentStore.m */; };
 		C2548563192D28FC0007DFC6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2548562192D28FC0007DFC6 /* Security.framework */; };
 		C2548566192D2B3B0007DFC6 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2548565192D2B3B0007DFC6 /* KeychainItemWrapper.m */; };
@@ -207,6 +207,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3CFFAAD1B1985BE000B45F6 /* header bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header bar.png"; sourceTree = "<group>"; };
 		A3D761741B10E7660086064E /* GRID_ENERGIZE_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_ENERGIZE_0.png; sourceTree = "<group>"; };
 		A3D761751B10E7660086064E /* GRID_ENERGIZE_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_ENERGIZE_1.png; sourceTree = "<group>"; };
 		A3D761761B10E7660086064E /* GRID_DISCOVER_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_DISCOVER_0.png; sourceTree = "<group>"; };
@@ -277,12 +278,11 @@
 		C254854B192BBB7B0007DFC6 /* PrizesFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizesFooterView.m; sourceTree = "<group>"; };
 		C254854D192BCD810007DFC6 /* PrizeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeTypes.h; sourceTree = "<group>"; };
 		C254854E192BCD810007DFC6 /* PrizeTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeTypes.m; sourceTree = "<group>"; };
-		C2548550192BE0190007DFC6 /* ADULT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADULT.png; sourceTree = "<group>"; };
-		C2548551192BE0190007DFC6 /* Header Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Header Bar.png"; sourceTree = "<group>"; };
-		C2548552192BE0190007DFC6 /* READER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = READER.png; sourceTree = "<group>"; };
-		C2548553192BE0190007DFC6 /* TEEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TEEN.png; sourceTree = "<group>"; };
-		C2548554192BE0190007DFC6 /* PRE-READER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PRE-READER.png"; sourceTree = "<group>"; };
-		C2548556192BE0190007DFC6 /* STAFF SJPL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STAFF SJPL.png"; sourceTree = "<group>"; };
+		C2548550192BE0190007DFC6 /* adult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adult.png; sourceTree = "<group>"; };
+		C2548552192BE0190007DFC6 /* reader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reader.png; sourceTree = "<group>"; };
+		C2548553192BE0190007DFC6 /* teen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teen.png; sourceTree = "<group>"; };
+		C2548554192BE0190007DFC6 /* pre-reader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pre-reader.png"; sourceTree = "<group>"; };
+		C2548556192BE0190007DFC6 /* staff sjpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "staff sjpl.png"; sourceTree = "<group>"; };
 		C254855F192D19660007DFC6 /* PersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistentStore.h; sourceTree = "<group>"; };
 		C2548560192D19660007DFC6 /* PersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentStore.m; sourceTree = "<group>"; };
 		C2548562192D28FC0007DFC6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -704,12 +704,12 @@
 		C294E187193E84610066AC26 /* SelectMember */ = {
 			isa = PBXGroup;
 			children = (
-				C2548550192BE0190007DFC6 /* ADULT.png */,
-				C2548551192BE0190007DFC6 /* Header Bar.png */,
-				C2548552192BE0190007DFC6 /* READER.png */,
-				C2548553192BE0190007DFC6 /* TEEN.png */,
-				C2548554192BE0190007DFC6 /* PRE-READER.png */,
-				C2548556192BE0190007DFC6 /* STAFF SJPL.png */,
+				A3CFFAAD1B1985BE000B45F6 /* header bar.png */,
+				C2548550192BE0190007DFC6 /* adult.png */,
+				C2548552192BE0190007DFC6 /* reader.png */,
+				C2548553192BE0190007DFC6 /* teen.png */,
+				C2548554192BE0190007DFC6 /* pre-reader.png */,
+				C2548556192BE0190007DFC6 /* staff sjpl.png */,
 			);
 			name = SelectMember;
 			sourceTree = "<group>";
@@ -961,7 +961,7 @@
 				C24FDF4A19195819009C7A9A /* Images.xcassets in Resources */,
 				C2CCFC461939B18900FEB1B6 /* APP_BATTERY_ON-33.png in Resources */,
 				C2CCFBF41939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png in Resources */,
-				C254855B192BE0190007DFC6 /* PRE-READER.png in Resources */,
+				C254855B192BE0190007DFC6 /* pre-reader.png in Resources */,
 				C2CCFC431939B18900FEB1B6 /* APP_BATTERY_ON-30.png in Resources */,
 				C2CCFC441939B18900FEB1B6 /* APP_BATTERY_ON-31.png in Resources */,
 				C2CCFBE91939B12A00FEB1B6 /* APP_BATTERY_OFF-30.png in Resources */,
@@ -979,13 +979,14 @@
 				C2CCFBE11939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png in Resources */,
 				C2CCFBF01939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png in Resources */,
 				C2548541192AA2C80007DFC6 /* read.png in Resources */,
-				C254855D192BE0190007DFC6 /* STAFF SJPL.png in Resources */,
+				C254855D192BE0190007DFC6 /* staff sjpl.png in Resources */,
 				C2CCFC271939B18900FEB1B6 /* APP_BATTERY_ON-02.png in Resources */,
 				C2CCFC3B1939B18900FEB1B6 /* APP_BATTERY_ON-22.png in Resources */,
 				A3D7617E1B10E7660086064E /* GRID_DISCOVER_0.png in Resources */,
 				C2CCFBEE1939B12A00FEB1B6 /* APP_BATTERY_OFF-35.png in Resources */,
 				C2CCFC4E1939B18900FEB1B6 /* APP_BATTERY_ON-41.png in Resources */,
 				C2CCFBF31939B12A00FEB1B6 /* APP_BATTERY_OFF-40.png in Resources */,
+				A3CFFAAE1B1985BE000B45F6 /* header bar.png in Resources */,
 				C2CCFBEA1939B12A00FEB1B6 /* APP_BATTERY_OFF-31.png in Resources */,
 				C2CCFBEF1939B12A00FEB1B6 /* APP_BATTERY_OFF-36.png in Resources */,
 				C29A2BE6192475D9000CE3DF /* APP_BATTERY_OFF-14.png in Resources */,
@@ -1032,7 +1033,6 @@
 				C29A2BDC192475D9000CE3DF /* APP_BATTERY_OFF-04.png in Resources */,
 				C2CCFC3C1939B18900FEB1B6 /* APP_BATTERY_ON-23.png in Resources */,
 				A3D7617D1B10E7660086064E /* GRID_ENERGIZE_1.png in Resources */,
-				C2548558192BE0190007DFC6 /* Header Bar.png in Resources */,
 				C248357E192EA10600539C98 /* APP Robot ON-01.png in Resources */,
 				C248351E192EA10600539C98 /* PRIZES_4_0.png in Resources */,
 				C2CCFC381939B18900FEB1B6 /* APP_BATTERY_ON-19.png in Resources */,
@@ -1040,15 +1040,15 @@
 				C248351B192EA10600539C98 /* PRIZES_3_0.png in Resources */,
 				C29A2BD9192475D9000CE3DF /* APP_BATTERY_OFF-01.png in Resources */,
 				C2CCFC301939B18900FEB1B6 /* APP_BATTERY_ON-11.png in Resources */,
-				C2548559192BE0190007DFC6 /* READER.png in Resources */,
+				C2548559192BE0190007DFC6 /* reader.png in Resources */,
 				C24FDF3319195819009C7A9A /* InfoPlist.strings in Resources */,
 				C2CCFC3E1939B18900FEB1B6 /* APP_BATTERY_ON-25.png in Resources */,
 				C29A2BDD192475D9000CE3DF /* APP_BATTERY_OFF-05.png in Resources */,
 				C2483521192EA10600539C98 /* PRIZES_5_0.png in Resources */,
 				C2CCFBE01939B12A00FEB1B6 /* APP_BATTERY_OFF-21.png in Resources */,
-				C254855A192BE0190007DFC6 /* TEEN.png in Resources */,
+				C254855A192BE0190007DFC6 /* teen.png in Resources */,
 				A3D761871B10EBCB0086064E /* background.png in Resources */,
-				C2548557192BE0190007DFC6 /* ADULT.png in Resources */,
+				C2548557192BE0190007DFC6 /* adult.png in Resources */,
 				C2CCFC2A1939B18900FEB1B6 /* APP_BATTERY_ON-05.png in Resources */,
 				C2483519192EA10600539C98 /* PRIZES_2_1.png in Resources */,
 				C294E185193E842B0066AC26 /* PRIZES_4_2.png in Resources */,
@@ -1280,15 +1280,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SanJoseLibrary/SanJoseLibrary-Prefix.pch";
 				INFOPLIST_FILE = "SanJoseLibrary/SanJoseLibrary-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "41FE5491-64ED-4BAC-8685-975F6D4463A8";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1297,15 +1297,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SanJoseLibrary/SanJoseLibrary-Prefix.pch";
 				INFOPLIST_FILE = "SanJoseLibrary/SanJoseLibrary-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "41FE5491-64ED-4BAC-8685-975F6D4463A8";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
