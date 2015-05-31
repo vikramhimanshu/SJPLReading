@@ -13,7 +13,7 @@
 #import "ServiceRequest.h"
 #import "Utillities.h"
 
-@interface ReadingLogViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate>
+@interface ReadingLogViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *readingLogCollectionViewCells;
 @property (strong, nonatomic) NSIndexPath *currentIndexPath;
@@ -62,6 +62,10 @@
 
 - (void)setupReadingLogCollectionViewCells
 {
+    if (self.readingLogCollectionViewCells) {
+        [self.readingLogCollectionViewCells removeAllObjects];
+        self.readingLogCollectionViewCells = nil;
+    }
     self.readingLogCollectionViewCells = [[NSMutableArray alloc] initWithCapacity:30];
     NSInteger numberOfReadCells = self.currentReadingTracker/20;
     self.currentIndexPath = [NSIndexPath indexPathForItem:numberOfReadCells
@@ -131,13 +135,16 @@
 
 -(BOOL)shouldShowNextDesign
 {
-    NSInteger idx = [self.currentUser.readingLog integerValue]/600;
+    NSInteger idx = ceil([self.currentUser.readingLog floatValue]/600.0f);
+    idx = idx % 5;
     return idx == [self.currentUser nextDesignIndex];
 }
 
 -(NSInteger)currentReadingTracker
 {
-    _currentReadingTracker = labs([self.currentUser.readingLog integerValue]-[self.currentUser nextDesignIndex]*MinReadingMinutes);
+    NSInteger current = [self.currentUser.readingLog integerValue];
+    NSInteger index = current/600;
+    _currentReadingTracker = labs(current-index*600);
     
     return _currentReadingTracker;
 }
@@ -207,34 +214,47 @@
 
 - (void)checkForReadingMileStones
 {
-    if (self.shouldShowNextDesign) {
+    if (self.shouldShowNextDesign)
+    {
         NSString *imageName = [NSString stringWithFormat:@"Design%ld",(long)[self.currentUser nextDesignIndex]];
         self.batteryFullImageView.image = [UIImage imageNamed:imageName];
         self.batteryFullImageView.hidden = NO;
         self.readingLogCollectionView.hidden = YES;
-        self.myNavigationItem.rightBarButtonItem.enabled = NO;
     }
     else
     {
         self.batteryFullImageView.hidden = YES;
         self.readingLogCollectionView.hidden = NO;
-        self.myNavigationItem.rightBarButtonItem.enabled = YES;
         return;
     }
     
-    if ([self.currentUser.readingLog integerValue] == 600) {
+    if ([self.currentUser.readingLog integerValue] == 600)
+    {
         [Utillities showAlertWithTitle:@"Congratulations!"
                                message:@"You've won a prize for completing 10 hours of reading!\nPlease log on to sjplsummer.org to see when you have earned prizes or visit your local San José Public Library."
                               delegate:self
                      cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     }
-//    else {
-//        [Utillities showAlertWithTitle:@"Congratulations!"
-//                               message:@"Keep tracking your reading to earn more reading badges!"
-//                              delegate:self
-//                     cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-//    }
+    else if ([self shouldShowNextDesign])
+    {
+        [Utillities showAlertWithTitle:@"Congratulations!"
+                               message:@"Keep tracking your reading to earn more reading badges!"
+                              delegate:self
+                     cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    }
 }
+
+#pragma mark UIAlertViewDelegate
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    self.batteryFullImageView.hidden = YES;
+    self.readingLogCollectionView.hidden = NO;
+    [self setupReadingLogCollectionViewCells];
+    [self.readingLogCollectionView reloadData];
+}
+
+#pragma mark UICollectionViewDelegate
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {

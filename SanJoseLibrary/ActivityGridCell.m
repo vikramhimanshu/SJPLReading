@@ -103,8 +103,8 @@
                 if ([[UIApplication sharedApplication] canOpenURL:self.activityCellData.url]) {
                     [[UIApplication sharedApplication] openURL:self.activityCellData.url];
                 }
+                return;
             }
-            return;
             break;
             
         default:

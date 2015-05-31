@@ -68,11 +68,11 @@ static NSInteger const ReadingMinutesInterval = 20;
 -(NSInteger)nextDesignIndex
 {
     NSInteger current = [self.readingLog integerValue];
-    NSInteger index = (current/MinReadingMinutes > 5)? 5 : current/MinReadingMinutes;
+    NSInteger index = current/MinReadingMinutes;
+    index = index % 5;
     if (_currentDesignIndex != index) {
         _currentDesignIndex = index;
     }
-    _currentDesignIndex = _currentDesignIndex < 1? 1 : _currentDesignIndex;
     return _currentDesignIndex;
 }
 
