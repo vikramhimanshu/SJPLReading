@@ -10,7 +10,7 @@
 #import "ContainerViewController.h"
 
 #import "ServiceRequest.h"
-
+#import "PrizesFooterView.h"
 #import "PrizeTypes.h"
 #import "User.h"
 
@@ -19,7 +19,10 @@
 @property (strong, nonatomic) User *currentUser;
 @property (strong, nonatomic) PrizeType *prizesForUser;
 
+@property (strong, nonatomic) PrizeType *currentPrizes;
+
 @property (weak, nonatomic) IBOutlet UILabel *readingLogLbl;
+@property (weak, nonatomic) IBOutlet PrizesFooterView *prizeView;
 
 @end
 
@@ -33,9 +36,11 @@
     [sr getPrizeAndUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
         PrizeTypes *prizes = [[PrizeTypes alloc] prizeTypesWithProperties:json[@"prizes"]];
         self.prizesForUser = [prizes prizesForUserType:self.currentUser.userType];
+        
         if (response) {
             dispatch_sync(dispatch_get_main_queue(), ^{
-                //update UI
+                [self.prizeView setupViewWithPrizeType:self.prizesForUser
+                                       userPrizeStatus:self.currentUser.prizes];
                 self.readingLogLbl.text = [self userReadingHoursFormatedInHoursMinutes];
             });
         }

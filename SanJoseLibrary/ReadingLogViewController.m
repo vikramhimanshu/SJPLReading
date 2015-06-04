@@ -13,6 +13,11 @@
 #import "ServiceRequest.h"
 #import "Utillities.h"
 
+#import "PrizeType.h"
+#import "PrizeTypes.h"
+#import "Prize.h"
+
+
 @interface ReadingLogViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *readingLogCollectionViewCells;
@@ -135,18 +140,16 @@
 
 -(BOOL)shouldShowNextDesign
 {
-    NSInteger idx = ceil([self.currentUser.readingLog floatValue]/600.0f);
-    idx = idx % 5;
-    return idx == [self.currentUser nextDesignIndex];
+    _shouldShowNextDesign = NO;
+    if ([self.currentUser.readingLog integerValue] > 0) {
+        _shouldShowNextDesign = [self currentReadingTracker] == 0;
+    }
+    return _shouldShowNextDesign;
 }
 
 -(NSInteger)currentReadingTracker
 {
-    NSInteger current = [self.currentUser.readingLog integerValue];
-    NSInteger index = current/600;
-    _currentReadingTracker = labs(current-index*600);
-    
-    return _currentReadingTracker;
+    return [self.currentUser.readingLog integerValue] % 600;
 }
 
 -(NSIndexPath *)currentIndexPath
@@ -230,10 +233,25 @@
     
     if ([self.currentUser.readingLog integerValue] == 600)
     {
-        [Utillities showAlertWithTitle:@"Congratulations!"
-                               message:@"You've won a prize for completing 10 hours of reading!\nPlease log on to sjplsummer.org to see when you have earned prizes or visit your local San José Public Library."
-                              delegate:self
-                     cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        ServiceRequest *sr = [ServiceRequest sharedRequest];
+        [sr getPrizeAndUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
+            PrizeTypes *prizes = [[PrizeTypes alloc] prizeTypesWithProperties:json[@"prizes"]];
+            PrizeType *prizesForUser = [prizes prizesForUserType:self.currentUser.userType];
+            
+            NSString *message = nil;
+            NSMutableArray *won = [[self.currentUser.prizes valueForKeyPath:@"state"] mutableCopy];
+            if ([won[2]  isEqual: @(1)]) {
+                if (prizesForUser.prize2) {
+                    message = [NSString stringWithFormat:@"You've won the following prize for completing 10 hours of reading: %@.\nKeep tracking your reading to earn more reading badges!",prizesForUser.prize2];
+                }
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [Utillities showAlertWithTitle:@"Congratulations!"
+                                       message:message
+                                      delegate:self
+                             cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            });
+        }];
     }
     else if ([self shouldShowNextDesign])
     {
@@ -248,10 +266,12 @@
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    self.batteryFullImageView.hidden = YES;
-    self.readingLogCollectionView.hidden = NO;
-    [self setupReadingLogCollectionViewCells];
-    [self.readingLogCollectionView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setupReadingLogCollectionViewCells];
+        [self.readingLogCollectionView reloadData];
+        self.batteryFullImageView.hidden = YES;
+        self.readingLogCollectionView.hidden = NO;
+    });
 }
 
 #pragma mark UICollectionViewDelegate

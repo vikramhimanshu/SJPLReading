@@ -279,6 +279,15 @@
     {
         if ([string rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound)
         {
+            // BasicAlert(@"", @"This field accepts only alphanumeric entries.");
+            return NO;
+        }
+    }
+    else if (textField.keyboardType == UIKeyboardTypePhonePad)
+    {
+        charLimit = 10;
+        if ([string rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location != NSNotFound)
+        {
             // BasicAlert(@"", @"This field accepts only numeric entries.");
             return NO;
         }

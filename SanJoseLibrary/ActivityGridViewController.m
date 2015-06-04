@@ -54,6 +54,11 @@
             });
         }        
     }];
+
+    [sr getPrizeAndUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
+        PrizeTypes *prizes = [[PrizeTypes alloc] prizeTypesWithProperties:json[@"prizes"]];
+        self.prizesForUser = [prizes prizesForUserType:self.currentUser.userType];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -105,13 +110,21 @@
                                                   [arr addObject:p];
                                               }
                                               BOOL prizesViewNeedsRefresh = NO;
+                                              NSInteger j = -1;
                                               if ([arr count] && ![[arr valueForKeyPath:@"state"] isEqualToArray:[self.currentUser.prizes valueForKeyPath:@"state"]])
                                               {
                                                   prizesViewNeedsRefresh = YES;
                                                   self.currentUser.prizes = [arr copy];
+                                                  
+                                                  NSMutableArray *won = [[arr valueForKeyPath:@"state"] mutableCopy];
+                                                  if ([won[1]  isEqual: @(1)]) {
+                                                      j = 1;
+                                                  } else if ([won[0]  isEqual: @(1)]) {
+                                                      j = 0;
+                                                  }
                                               }
-                                              
                                               [arr removeLastObject];
+                                              
                                               NSIndexPath *ip = [NSIndexPath indexPathForItem:[cellIndex integerValue] inSection:0];
                                               dispatch_async(dispatch_get_main_queue(), ^{
                                                   
@@ -120,8 +133,17 @@
                                                   
                                                   if (prizesViewNeedsRefresh)
                                                   {
+                                                      NSString *message = nil;
+                                                      if (j == 0 ) // prize index 0
+                                                      {
+                                                          message = [NSString stringWithFormat:                                      @"You've won the following prize for completing 4 activity squares in a row: %@.\nPlease visit your local San Jose Public Library to claim your prize.\nComplete the entire activity grid for a chance to win more prizes!",self.prizesForUser.prize1];
+                                                      }
+                                                      else if (j == 1)
+                                                      {
+                                                          message = [NSString stringWithFormat:                                      @"For completing all activities, you've won : %@.\nThe library will contact you if you win. Please make sure you have a valid phone number or email listed on your account.",self.prizesForUser.prize2];
+                                                      }
                                                       [Utillities showAlertWithTitle:@"Congratulations!"
-                                                                             message:@"You've won a prize!!\nPlease log on to sjplsummer.org to see when you have earned prizes or visit your local San José Public Library."
+                                                                             message:message
                                                                             delegate:self
                                                                    cancelButtonTitle:@"Ok" otherButtonTitles:nil];
                                                   }

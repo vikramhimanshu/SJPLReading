@@ -49,17 +49,17 @@
     [self.prize3 setBackgroundImage:[UIImage imageNamed:imgName]
                            forState:UIControlStateNormal];
     
-    p = [userPrizes objectAtIndex:3];
-    imgName = [NSString stringWithFormat:@"PRIZES_4_%d",p.state];
-    self.prize4.tag = p.state;
-    [self.prize4 setBackgroundImage:[UIImage imageNamed:imgName]
-                           forState:UIControlStateNormal];
-    
-    p = [userPrizes objectAtIndex:5];
-    imgName = [NSString stringWithFormat:@"PRIZES_5_%d",p.state];
-    self.prize5.tag = p.state;
-    [self.prize5 setBackgroundImage:[UIImage imageNamed:imgName]
-                           forState:UIControlStateNormal];
+//    p = [userPrizes objectAtIndex:3];
+//    imgName = [NSString stringWithFormat:@"PRIZES_4_%d",p.state];
+//    self.prize4.tag = p.state;
+//    [self.prize4 setBackgroundImage:[UIImage imageNamed:imgName]
+//                           forState:UIControlStateNormal];
+//    
+//    p = [userPrizes objectAtIndex:5];
+//    imgName = [NSString stringWithFormat:@"PRIZES_5_%d",p.state];
+//    self.prize5.tag = p.state;
+//    [self.prize5 setBackgroundImage:[UIImage imageNamed:imgName]
+//                           forState:UIControlStateNormal];
 }
 
 - (IBAction)prizeButtonClicked:(UIButton *)sender
