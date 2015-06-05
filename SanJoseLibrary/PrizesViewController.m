@@ -30,6 +30,8 @@
 
 -(void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     self.currentUser = [(ContainerViewController *)self.parentViewController currentUser];
     
     ServiceRequest *sr = [ServiceRequest sharedRequest];

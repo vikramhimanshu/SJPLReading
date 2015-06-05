@@ -24,7 +24,6 @@
 @property (strong, nonatomic) NSIndexPath *currentIndexPath;
 @property (weak, nonatomic) User *currentUser;
 @property (weak, nonatomic) IBOutlet UICollectionView *readingLogCollectionView;
-
 @property (weak, nonatomic) IBOutlet UIImageView *batteryFullImageView;
 
 @property (nonatomic) BOOL shouldShowNextDesign;
@@ -53,15 +52,21 @@
     self.currentUser = [(ContainerViewController *)self.parentViewController currentUser];
 
     self.batteryFullImageView.hidden = YES;
-    
+
     [self setupReadingLogCollectionView];
     [self setupReadingLogCollectionViewCells];
 }
 
 - (void)setupReadingLogCollectionView
 {
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"read_background"]];
-    [backgroundView setContentMode:UIViewContentModeScaleAspectFill];
+    UIImage *background = [UIImage imageNamed:@"read_background"];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:background];
+    [backgroundView setFrame:self.readingLogCollectionView.frame];
+    [backgroundView setContentMode:UIViewContentModeScaleToFill];
+    [self.readingLogCollectionView registerClass:[UICollectionReusableView class]
+                        forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                               withReuseIdentifier:@"HeaderView"];
+//    self.readingLogCollectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"read_background.png"]];
     self.readingLogCollectionView.backgroundView = backgroundView;
 }
 
@@ -294,5 +299,25 @@
     }
     return cell;
 }
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    if (kind == UICollectionElementKindSectionHeader) {
+        
+        UICollectionReusableView *reusableview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        CGRect frame = reusableview.frame;
+        frame.origin.x = 5;
+        frame.size.width = CGRectGetWidth(reusableview.frame)-10;
+        UILabel *header = [[UILabel alloc] initWithFrame:frame];
+        [header setLineBreakMode:NSLineBreakByWordWrapping];
+        [header setNumberOfLines:0];
+        [header setFont:[UIFont systemFontOfSize:14]];
+        [header setText:@"For every 20 minutes you read, click '+20' Read for 10 hours to reveal special artwork and win a prize."];
+        [reusableview addSubview:header];
+        return reusableview;
+    }
+    return nil;
+}
+
 
 @end

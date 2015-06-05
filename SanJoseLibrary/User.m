@@ -9,7 +9,7 @@
 #import "User.h"
 #import "Activity.h"
 
-static NSInteger const MinReadingMinutes = 600;
+//static NSInteger const MinReadingMinutes = 600;
 static NSInteger const MaxReadingMinutes = 18000;
 static NSInteger const ReadingMinutesInterval = 20;
 

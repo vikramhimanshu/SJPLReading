@@ -27,6 +27,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
     if ([self.userTypes.userTypes count] == 0) {
         ServiceRequest *sr = [ServiceRequest sharedRequest];
         [sr getUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {

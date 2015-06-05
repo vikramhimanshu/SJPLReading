@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A371C4181B2151DD0044F3EC /* energize.png in Resources */ = {isa = PBXBuildFile; fileRef = A371C4131B2151DD0044F3EC /* energize.png */; };
+		A371C4191B2151DD0044F3EC /* explore.png in Resources */ = {isa = PBXBuildFile; fileRef = A371C4141B2151DD0044F3EC /* explore.png */; };
+		A371C41A1B2151DD0044F3EC /* help-iPhone.html in Resources */ = {isa = PBXBuildFile; fileRef = A371C4151B2151DD0044F3EC /* help-iPhone.html */; };
+		A371C41B1B2151DD0044F3EC /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = A371C4161B2151DD0044F3EC /* learn.png */; };
+		A371C41C1B2151DD0044F3EC /* read.png in Resources */ = {isa = PBXBuildFile; fileRef = A371C4171B2151DD0044F3EC /* read.png */; };
+		A371C4281B2175A90044F3EC /* read_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A371C4271B2175A90044F3EC /* read_background.png */; };
 		A3CFFAAE1B1985BE000B45F6 /* header bar.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFFAAD1B1985BE000B45F6 /* header bar.png */; };
 		A3D7617C1B10E7660086064E /* GRID_ENERGIZE_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761741B10E7660086064E /* GRID_ENERGIZE_0.png */; };
 		A3D7617D1B10E7660086064E /* GRID_ENERGIZE_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761751B10E7660086064E /* GRID_ENERGIZE_1.png */; };
@@ -26,7 +32,7 @@
 		A3D761971B10FCF40086064E /* Design3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618E1B10FCF40086064E /* Design3.png */; };
 		A3D761981B10FCF40086064E /* Design4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618F1B10FCF40086064E /* Design4.png */; };
 		A3D761991B10FCF40086064E /* Design5.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761901B10FCF40086064E /* Design5.png */; };
-		A3D7619A1B10FCF40086064E /* read_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761911B10FCF40086064E /* read_background.png */; };
+		A3D7619A1B10FCF40086064E /* read_background_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761911B10FCF40086064E /* read_background_old.png */; };
 		A3D7619B1B10FCF40086064E /* -20.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761921B10FCF40086064E /* -20.png */; };
 		A3D7619F1B138CB40086064E /* PrizesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7619E1B138CB40086064E /* PrizesViewController.m */; };
 		A3E1E8D41B0A3B6500191507 /* UIColor+SJPLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1E8D31B0A3B6500191507 /* UIColor+SJPLColors.m */; };
@@ -58,11 +64,6 @@
 		C24FDF5E19195819009C7A9A /* SanJoseLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C24FDF5D19195819009C7A9A /* SanJoseLibraryTests.m */; };
 		C24FDF69191958EE009C7A9A /* ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C24FDF68191958EE009C7A9A /* ServiceRequest.m */; };
 		C24FDF6F1919922F009C7A9A /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = C24FDF6E1919922F009C7A9A /* Account.m */; };
-		C2548541192AA2C80007DFC6 /* read.png in Resources */ = {isa = PBXBuildFile; fileRef = C254853B192AA2C80007DFC6 /* read.png */; };
-		C2548542192AA2C80007DFC6 /* help-iPhone.html in Resources */ = {isa = PBXBuildFile; fileRef = C254853C192AA2C80007DFC6 /* help-iPhone.html */; };
-		C2548543192AA2C80007DFC6 /* explore.png in Resources */ = {isa = PBXBuildFile; fileRef = C254853D192AA2C80007DFC6 /* explore.png */; };
-		C2548544192AA2C80007DFC6 /* energize.png in Resources */ = {isa = PBXBuildFile; fileRef = C254853E192AA2C80007DFC6 /* energize.png */; };
-		C2548546192AA2C80007DFC6 /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = C2548540192AA2C80007DFC6 /* learn.png */; };
 		C2548549192ABB9B0007DFC6 /* NewMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2548548192ABB9B0007DFC6 /* NewMemberViewController.m */; };
 		C254854C192BBB7B0007DFC6 /* PrizesFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C254854B192BBB7B0007DFC6 /* PrizesFooterView.m */; };
 		C254854F192BCD810007DFC6 /* PrizeTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = C254854E192BCD810007DFC6 /* PrizeTypes.m */; };
@@ -207,6 +208,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A371C4131B2151DD0044F3EC /* energize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = energize.png; sourceTree = "<group>"; };
+		A371C4141B2151DD0044F3EC /* explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore.png; sourceTree = "<group>"; };
+		A371C4151B2151DD0044F3EC /* help-iPhone.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "help-iPhone.html"; sourceTree = "<group>"; };
+		A371C4161B2151DD0044F3EC /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
+		A371C4171B2151DD0044F3EC /* read.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read.png; sourceTree = "<group>"; };
+		A371C4271B2175A90044F3EC /* read_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_background.png; sourceTree = "<group>"; };
 		A3CFFAAD1B1985BE000B45F6 /* header bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header bar.png"; sourceTree = "<group>"; };
 		A3D761741B10E7660086064E /* GRID_ENERGIZE_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_ENERGIZE_0.png; sourceTree = "<group>"; };
 		A3D761751B10E7660086064E /* GRID_ENERGIZE_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GRID_ENERGIZE_1.png; sourceTree = "<group>"; };
@@ -226,7 +233,7 @@
 		A3D7618E1B10FCF40086064E /* Design3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design3.png; sourceTree = "<group>"; };
 		A3D7618F1B10FCF40086064E /* Design4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design4.png; sourceTree = "<group>"; };
 		A3D761901B10FCF40086064E /* Design5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design5.png; sourceTree = "<group>"; };
-		A3D761911B10FCF40086064E /* read_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_background.png; sourceTree = "<group>"; };
+		A3D761911B10FCF40086064E /* read_background_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_background_old.png; sourceTree = "<group>"; };
 		A3D761921B10FCF40086064E /* -20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "-20.png"; sourceTree = "<group>"; };
 		A3D7619D1B138CB40086064E /* PrizesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizesViewController.h; sourceTree = "<group>"; };
 		A3D7619E1B138CB40086064E /* PrizesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizesViewController.m; sourceTree = "<group>"; };
@@ -267,11 +274,6 @@
 		C24FDF68191958EE009C7A9A /* ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRequest.m; sourceTree = "<group>"; };
 		C24FDF6D1919922F009C7A9A /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		C24FDF6E1919922F009C7A9A /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
-		C254853B192AA2C80007DFC6 /* read.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read.png; sourceTree = "<group>"; };
-		C254853C192AA2C80007DFC6 /* help-iPhone.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "help-iPhone.html"; sourceTree = "<group>"; };
-		C254853D192AA2C80007DFC6 /* explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore.png; sourceTree = "<group>"; };
-		C254853E192AA2C80007DFC6 /* energize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = energize.png; sourceTree = "<group>"; };
-		C2548540192AA2C80007DFC6 /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
 		C2548547192ABB9B0007DFC6 /* NewMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMemberViewController.h; sourceTree = "<group>"; };
 		C2548548192ABB9B0007DFC6 /* NewMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMemberViewController.m; sourceTree = "<group>"; };
 		C254854A192BBB7B0007DFC6 /* PrizesFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizesFooterView.h; sourceTree = "<group>"; };
@@ -514,6 +516,7 @@
 		C248343F192EA10600539C98 /* Read */ = {
 			isa = PBXGroup;
 			children = (
+				A371C4271B2175A90044F3EC /* read_background.png */,
 				A3D7618A1B10FCF40086064E /* +20.png */,
 				A3D7618B1B10FCF40086064E /* CHECKMARK.png */,
 				A3D7618C1B10FCF40086064E /* Design1.png */,
@@ -521,7 +524,7 @@
 				A3D7618E1B10FCF40086064E /* Design3.png */,
 				A3D7618F1B10FCF40086064E /* Design4.png */,
 				A3D761901B10FCF40086064E /* Design5.png */,
-				A3D761911B10FCF40086064E /* read_background.png */,
+				A3D761911B10FCF40086064E /* read_background_old.png */,
 				A3D761921B10FCF40086064E /* -20.png */,
 				C29A2BAB192475D9000CE3DF /* APP Battery OFF */,
 				C29A2B4F1924757C000CE3DF /* APP Battery ON */,
@@ -620,11 +623,11 @@
 		C254855E192BE0330007DFC6 /* Information Screen Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C254853B192AA2C80007DFC6 /* read.png */,
-				C254853C192AA2C80007DFC6 /* help-iPhone.html */,
-				C254853D192AA2C80007DFC6 /* explore.png */,
-				C254853E192AA2C80007DFC6 /* energize.png */,
-				C2548540192AA2C80007DFC6 /* learn.png */,
+				A371C4131B2151DD0044F3EC /* energize.png */,
+				A371C4141B2151DD0044F3EC /* explore.png */,
+				A371C4151B2151DD0044F3EC /* help-iPhone.html */,
+				A371C4161B2151DD0044F3EC /* learn.png */,
+				A371C4171B2151DD0044F3EC /* read.png */,
 			);
 			name = "Information Screen Assets";
 			sourceTree = "<group>";
@@ -963,14 +966,17 @@
 				C2CCFBF41939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png in Resources */,
 				C254855B192BE0190007DFC6 /* pre-reader.png in Resources */,
 				C2CCFC431939B18900FEB1B6 /* APP_BATTERY_ON-30.png in Resources */,
+				A371C4181B2151DD0044F3EC /* energize.png in Resources */,
 				C2CCFC441939B18900FEB1B6 /* APP_BATTERY_ON-31.png in Resources */,
 				C2CCFBE91939B12A00FEB1B6 /* APP_BATTERY_OFF-30.png in Resources */,
 				C2CCFBF51939B12A00FEB1B6 /* APP_BATTERY_OFF-42.png in Resources */,
 				C2CCFBDE1939B12A00FEB1B6 /* APP_BATTERY_OFF-19.png in Resources */,
+				A371C41B1B2151DD0044F3EC /* learn.png in Resources */,
 				C2CCFC2C1939B18900FEB1B6 /* APP_BATTERY_ON-07.png in Resources */,
 				C2CCFBF81939B12A00FEB1B6 /* APP_BATTERY_OFF-45.png in Resources */,
 				C29A2BE3192475D9000CE3DF /* APP_BATTERY_OFF-11.png in Resources */,
 				C2CCFBDC1939B12A00FEB1B6 /* APP_BATTERY_OFF-17.png in Resources */,
+				A371C4281B2175A90044F3EC /* read_background.png in Resources */,
 				C2CCFC421939B18900FEB1B6 /* APP_BATTERY_ON-29.png in Resources */,
 				C2483518192EA10600539C98 /* PRIZES_2_0.png in Resources */,
 				A3D761991B10FCF40086064E /* Design5.png in Resources */,
@@ -978,7 +984,6 @@
 				A3D761891B10EBCB0086064E /* background@3x.png in Resources */,
 				C2CCFBE11939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png in Resources */,
 				C2CCFBF01939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png in Resources */,
-				C2548541192AA2C80007DFC6 /* read.png in Resources */,
 				C254855D192BE0190007DFC6 /* staff sjpl.png in Resources */,
 				C2CCFC271939B18900FEB1B6 /* APP_BATTERY_ON-02.png in Resources */,
 				C2CCFC3B1939B18900FEB1B6 /* APP_BATTERY_ON-22.png in Resources */,
@@ -996,9 +1001,7 @@
 				C2CCFC481939B18900FEB1B6 /* APP_BATTERY_ON-35.png in Resources */,
 				C29A2BE0192475D9000CE3DF /* APP_BATTERY_OFF-08.png in Resources */,
 				C2CCFBF11939B12A00FEB1B6 /* APP_BATTERY_OFF-38.png in Resources */,
-				C2548542192AA2C80007DFC6 /* help-iPhone.html in Resources */,
 				C29A2BE1192475D9000CE3DF /* APP_BATTERY_OFF-09.png in Resources */,
-				C2548543192AA2C80007DFC6 /* explore.png in Resources */,
 				C2CCFC391939B18900FEB1B6 /* APP_BATTERY_ON-20.png in Resources */,
 				C2CCFBE21939B12A00FEB1B6 /* APP_BATTERY_OFF-23.png in Resources */,
 				C2CCFC2E1939B18900FEB1B6 /* APP_BATTERY_ON-09.png in Resources */,
@@ -1010,7 +1013,6 @@
 				C2CCFBEB1939B12A00FEB1B6 /* APP_BATTERY_OFF-32.png in Resources */,
 				C2CCFC501939B18900FEB1B6 /* APP_BATTERY_ON-43.png in Resources */,
 				A3D761821B10E7660086064E /* GRID_READ_0.png in Resources */,
-				C2548546192AA2C80007DFC6 /* learn.png in Resources */,
 				C2CCFC3F1939B18900FEB1B6 /* APP_BATTERY_ON-26.png in Resources */,
 				C2CCFC4F1939B18900FEB1B6 /* APP_BATTERY_ON-42.png in Resources */,
 				C2CCFBF61939B12A00FEB1B6 /* APP_BATTERY_OFF-43.png in Resources */,
@@ -1021,7 +1023,6 @@
 				C2CCFC321939B18900FEB1B6 /* APP_BATTERY_ON-13.png in Resources */,
 				C2CCFC3A1939B18900FEB1B6 /* APP_BATTERY_ON-21.png in Resources */,
 				C2CCFC331939B18900FEB1B6 /* APP_BATTERY_ON-14.png in Resources */,
-				C2548544192AA2C80007DFC6 /* energize.png in Resources */,
 				C2CCFC401939B18900FEB1B6 /* APP_BATTERY_ON-27.png in Resources */,
 				C24FDF3C19195819009C7A9A /* Main_iPhone.storyboard in Resources */,
 				C248351C192EA10600539C98 /* PRIZES_3_1.png in Resources */,
@@ -1055,6 +1056,7 @@
 				C2CCFBDF1939B12A00FEB1B6 /* APP_BATTERY_OFF-20.png in Resources */,
 				C2CCFBDD1939B12A00FEB1B6 /* APP_BATTERY_OFF-18.png in Resources */,
 				C2CCFC491939B18900FEB1B6 /* APP_BATTERY_ON-36.png in Resources */,
+				A371C4191B2151DD0044F3EC /* explore.png in Resources */,
 				C2CCFBF21939B12A00FEB1B6 /* APP_BATTERY_OFF-39.png in Resources */,
 				C294E186193E842B0066AC26 /* PRIZES_5_2.png in Resources */,
 				C2CCFBE61939B12A00FEB1B6 /* APP_BATTERY_OFF-27.png in Resources */,
@@ -1068,10 +1070,11 @@
 				C2CCFC291939B18900FEB1B6 /* APP_BATTERY_ON-04.png in Resources */,
 				C2CCFC261939B18900FEB1B6 /* APP_BATTERY_ON-01.png in Resources */,
 				C2CCFC351939B18900FEB1B6 /* APP_BATTERY_ON-16.png in Resources */,
+				A371C41C1B2151DD0044F3EC /* read.png in Resources */,
 				C2CCFBED1939B12A00FEB1B6 /* APP_BATTERY_OFF-34.png in Resources */,
 				C2CCFC4D1939B18900FEB1B6 /* APP_BATTERY_ON-40.png in Resources */,
 				C294E184193E842B0066AC26 /* PRIZES_3_2.png in Resources */,
-				A3D7619A1B10FCF40086064E /* read_background.png in Resources */,
+				A3D7619A1B10FCF40086064E /* read_background_old.png in Resources */,
 				C29A2BE4192475D9000CE3DF /* APP_BATTERY_OFF-12.png in Resources */,
 				C2CCFC4B1939B18900FEB1B6 /* APP_BATTERY_ON-38.png in Resources */,
 				C2CCFC2F1939B18900FEB1B6 /* APP_BATTERY_ON-10.png in Resources */,
@@ -1092,6 +1095,7 @@
 				C2CCFBE31939B12A00FEB1B6 /* APP_BATTERY_OFF-24.png in Resources */,
 				C29A2BDE192475D9000CE3DF /* APP_BATTERY_OFF-06.png in Resources */,
 				A3D7617C1B10E7660086064E /* GRID_ENERGIZE_0.png in Resources */,
+				A371C41A1B2151DD0044F3EC /* help-iPhone.html in Resources */,
 				A3D761981B10FCF40086064E /* Design4.png in Resources */,
 				A3D761971B10FCF40086064E /* Design3.png in Resources */,
 				C2483515192EA10600539C98 /* PRIZES_1_0.png in Resources */,
