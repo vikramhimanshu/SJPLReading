@@ -10,6 +10,7 @@
 #import "PrizeType.h"
 #import "Prize.h"
 #import "Utillities.h"
+#import "User.h"
 
 @interface PrizesFooterView ()
 
@@ -26,40 +27,28 @@
 
 @implementation PrizesFooterView
 
--(void)setupViewWithPrizeType:(PrizeType *)prizeType userPrizeStatus:(NSArray *)userPrizes
+-(void)setupViewWithPrizeType:(PrizeType *)prizeType user:(User *)user
 {
     self.prizeType = prizeType;
     self.title.text = @"Prizes";
-    
+    NSArray *userPrizes = user.prizes;
     Prize *p = [userPrizes objectAtIndex:0];
-    NSString *imgName = [NSString stringWithFormat:@"PRIZES_1_%d",p.state];
+    NSString *imgName = [NSString stringWithFormat:@"%@_1_%d",user.userTypeName,p.state];
     self.prize1.tag = p.state;
     [self.prize1 setBackgroundImage:[UIImage imageNamed:imgName]
                            forState:UIControlStateNormal];
 
     p = [userPrizes objectAtIndex:1];
-    imgName = [NSString stringWithFormat:@"PRIZES_2_%d",p.state];
+    imgName = [NSString stringWithFormat:@"%@_2_%d",user.userTypeName,p.state];
     self.prize2.tag = p.state;
     [self.prize2 setBackgroundImage:[UIImage imageNamed:imgName]
                            forState:UIControlStateNormal];
     
     p = [userPrizes objectAtIndex:2];
-    imgName = [NSString stringWithFormat:@"PRIZES_3_%d",p.state];
+    imgName = [NSString stringWithFormat:@"%@_3_%d",user.userTypeName,p.state];
     self.prize3.tag = p.state;
     [self.prize3 setBackgroundImage:[UIImage imageNamed:imgName]
                            forState:UIControlStateNormal];
-    
-//    p = [userPrizes objectAtIndex:3];
-//    imgName = [NSString stringWithFormat:@"PRIZES_4_%d",p.state];
-//    self.prize4.tag = p.state;
-//    [self.prize4 setBackgroundImage:[UIImage imageNamed:imgName]
-//                           forState:UIControlStateNormal];
-//    
-//    p = [userPrizes objectAtIndex:5];
-//    imgName = [NSString stringWithFormat:@"PRIZES_5_%d",p.state];
-//    self.prize5.tag = p.state;
-//    [self.prize5 setBackgroundImage:[UIImage imageNamed:imgName]
-//                           forState:UIControlStateNormal];
 }
 
 - (IBAction)prizeButtonClicked:(UIButton *)sender

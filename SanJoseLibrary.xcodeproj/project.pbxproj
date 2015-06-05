@@ -25,15 +25,12 @@
 		A3D761871B10EBCB0086064E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761841B10EBCB0086064E /* background.png */; };
 		A3D761881B10EBCB0086064E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761851B10EBCB0086064E /* background@2x.png */; };
 		A3D761891B10EBCB0086064E /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761861B10EBCB0086064E /* background@3x.png */; };
-		A3D761931B10FCF40086064E /* +20.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618A1B10FCF40086064E /* +20.png */; };
 		A3D761941B10FCF40086064E /* CHECKMARK.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618B1B10FCF40086064E /* CHECKMARK.png */; };
 		A3D761951B10FCF40086064E /* Design1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618C1B10FCF40086064E /* Design1.png */; };
 		A3D761961B10FCF40086064E /* Design2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618D1B10FCF40086064E /* Design2.png */; };
 		A3D761971B10FCF40086064E /* Design3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618E1B10FCF40086064E /* Design3.png */; };
 		A3D761981B10FCF40086064E /* Design4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D7618F1B10FCF40086064E /* Design4.png */; };
 		A3D761991B10FCF40086064E /* Design5.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761901B10FCF40086064E /* Design5.png */; };
-		A3D7619A1B10FCF40086064E /* read_background_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761911B10FCF40086064E /* read_background_old.png */; };
-		A3D7619B1B10FCF40086064E /* -20.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D761921B10FCF40086064E /* -20.png */; };
 		A3D7619F1B138CB40086064E /* PrizesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D7619E1B138CB40086064E /* PrizesViewController.m */; };
 		A3E1E8D41B0A3B6500191507 /* UIColor+SJPLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1E8D31B0A3B6500191507 /* UIColor+SJPLColors.m */; };
 		C241FFFF191D8CEB00C914AA /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C241FFFE191D8CEB00C914AA /* EmptySegue.m */; };
@@ -47,7 +44,6 @@
 		C248351F192EA10600539C98 /* PRIZES_4_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C248343A192EA10600539C98 /* PRIZES_4_1.png */; };
 		C2483521192EA10600539C98 /* PRIZES_5_0.png in Resources */ = {isa = PBXBuildFile; fileRef = C248343C192EA10600539C98 /* PRIZES_5_0.png */; };
 		C2483522192EA10600539C98 /* PRIZES_5_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C248343D192EA10600539C98 /* PRIZES_5_1.png */; };
-		C248357E192EA10600539C98 /* APP Robot ON-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C248349D192EA10600539C98 /* APP Robot ON-01.png */; };
 		C24FDF2719195819009C7A9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24FDF2619195819009C7A9A /* Foundation.framework */; };
 		C24FDF2919195819009C7A9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24FDF2819195819009C7A9A /* CoreGraphics.framework */; };
 		C24FDF2B19195819009C7A9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24FDF2A19195819009C7A9A /* UIKit.framework */; };
@@ -90,102 +86,12 @@
 		C294E186193E842B0066AC26 /* PRIZES_5_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C294E181193E842B0066AC26 /* PRIZES_5_2.png */; };
 		C2981F721920348900DEBA0D /* ReadingLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2981F711920348900DEBA0D /* ReadingLogCell.m */; };
 		C2981F75192034A300DEBA0D /* ActivityGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2981F74192034A300DEBA0D /* ActivityGridCell.m */; };
-		C29A2BD9192475D9000CE3DF /* APP_BATTERY_OFF-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BAC192475D9000CE3DF /* APP_BATTERY_OFF-01.png */; };
-		C29A2BDA192475D9000CE3DF /* APP_BATTERY_OFF-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BAD192475D9000CE3DF /* APP_BATTERY_OFF-02.png */; };
-		C29A2BDB192475D9000CE3DF /* APP_BATTERY_OFF-03.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BAE192475D9000CE3DF /* APP_BATTERY_OFF-03.png */; };
-		C29A2BDC192475D9000CE3DF /* APP_BATTERY_OFF-04.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BAF192475D9000CE3DF /* APP_BATTERY_OFF-04.png */; };
-		C29A2BDD192475D9000CE3DF /* APP_BATTERY_OFF-05.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB0192475D9000CE3DF /* APP_BATTERY_OFF-05.png */; };
-		C29A2BDE192475D9000CE3DF /* APP_BATTERY_OFF-06.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB1192475D9000CE3DF /* APP_BATTERY_OFF-06.png */; };
-		C29A2BDF192475D9000CE3DF /* APP_BATTERY_OFF-07.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB2192475D9000CE3DF /* APP_BATTERY_OFF-07.png */; };
-		C29A2BE0192475D9000CE3DF /* APP_BATTERY_OFF-08.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB3192475D9000CE3DF /* APP_BATTERY_OFF-08.png */; };
-		C29A2BE1192475D9000CE3DF /* APP_BATTERY_OFF-09.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB4192475D9000CE3DF /* APP_BATTERY_OFF-09.png */; };
-		C29A2BE2192475D9000CE3DF /* APP_BATTERY_OFF-10.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB5192475D9000CE3DF /* APP_BATTERY_OFF-10.png */; };
-		C29A2BE3192475D9000CE3DF /* APP_BATTERY_OFF-11.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB6192475D9000CE3DF /* APP_BATTERY_OFF-11.png */; };
-		C29A2BE4192475D9000CE3DF /* APP_BATTERY_OFF-12.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB7192475D9000CE3DF /* APP_BATTERY_OFF-12.png */; };
-		C29A2BE5192475D9000CE3DF /* APP_BATTERY_OFF-13.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB8192475D9000CE3DF /* APP_BATTERY_OFF-13.png */; };
-		C29A2BE6192475D9000CE3DF /* APP_BATTERY_OFF-14.png in Resources */ = {isa = PBXBuildFile; fileRef = C29A2BB9192475D9000CE3DF /* APP_BATTERY_OFF-14.png */; };
 		C2CB4DC6191BF5A200BA3FBD /* Utillities.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB4DC5191BF5A200BA3FBD /* Utillities.m */; };
 		C2CB4DC9191BFFBF00BA3FBD /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB4DC8191BFFBF00BA3FBD /* RegisterViewController.m */; };
 		C2CB4DCF191C0D9400BA3FBD /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB4DCE191C0D9400BA3FBD /* Branch.m */; };
 		C2CB4DD2191C398D00BA3FBD /* Branches.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB4DD1191C398D00BA3FBD /* Branches.m */; };
 		C2CCFBB71939361E00FEB1B6 /* SelectMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CCFBB61939361E00FEB1B6 /* SelectMemberViewController.m */; };
 		C2CCFBBA193937A700FEB1B6 /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CCFBB9193937A700FEB1B6 /* MemberCell.m */; };
-		C2CCFBDA1939B12A00FEB1B6 /* APP_BATTERY_OFF-15.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBBB1939B12A00FEB1B6 /* APP_BATTERY_OFF-15.png */; };
-		C2CCFBDB1939B12A00FEB1B6 /* APP_BATTERY_OFF-16.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBBC1939B12A00FEB1B6 /* APP_BATTERY_OFF-16.png */; };
-		C2CCFBDC1939B12A00FEB1B6 /* APP_BATTERY_OFF-17.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBBD1939B12A00FEB1B6 /* APP_BATTERY_OFF-17.png */; };
-		C2CCFBDD1939B12A00FEB1B6 /* APP_BATTERY_OFF-18.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBBE1939B12A00FEB1B6 /* APP_BATTERY_OFF-18.png */; };
-		C2CCFBDE1939B12A00FEB1B6 /* APP_BATTERY_OFF-19.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBBF1939B12A00FEB1B6 /* APP_BATTERY_OFF-19.png */; };
-		C2CCFBDF1939B12A00FEB1B6 /* APP_BATTERY_OFF-20.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC01939B12A00FEB1B6 /* APP_BATTERY_OFF-20.png */; };
-		C2CCFBE01939B12A00FEB1B6 /* APP_BATTERY_OFF-21.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC11939B12A00FEB1B6 /* APP_BATTERY_OFF-21.png */; };
-		C2CCFBE11939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC21939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png */; };
-		C2CCFBE21939B12A00FEB1B6 /* APP_BATTERY_OFF-23.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC31939B12A00FEB1B6 /* APP_BATTERY_OFF-23.png */; };
-		C2CCFBE31939B12A00FEB1B6 /* APP_BATTERY_OFF-24.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC41939B12A00FEB1B6 /* APP_BATTERY_OFF-24.png */; };
-		C2CCFBE41939B12A00FEB1B6 /* APP_BATTERY_OFF-25.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC51939B12A00FEB1B6 /* APP_BATTERY_OFF-25.png */; };
-		C2CCFBE51939B12A00FEB1B6 /* APP_BATTERY_OFF-26.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC61939B12A00FEB1B6 /* APP_BATTERY_OFF-26.png */; };
-		C2CCFBE61939B12A00FEB1B6 /* APP_BATTERY_OFF-27.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC71939B12A00FEB1B6 /* APP_BATTERY_OFF-27.png */; };
-		C2CCFBE71939B12A00FEB1B6 /* APP_BATTERY_OFF-28.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC81939B12A00FEB1B6 /* APP_BATTERY_OFF-28.png */; };
-		C2CCFBE81939B12A00FEB1B6 /* APP_BATTERY_OFF-29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBC91939B12A00FEB1B6 /* APP_BATTERY_OFF-29.png */; };
-		C2CCFBE91939B12A00FEB1B6 /* APP_BATTERY_OFF-30.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBCA1939B12A00FEB1B6 /* APP_BATTERY_OFF-30.png */; };
-		C2CCFBEA1939B12A00FEB1B6 /* APP_BATTERY_OFF-31.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBCB1939B12A00FEB1B6 /* APP_BATTERY_OFF-31.png */; };
-		C2CCFBEB1939B12A00FEB1B6 /* APP_BATTERY_OFF-32.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBCC1939B12A00FEB1B6 /* APP_BATTERY_OFF-32.png */; };
-		C2CCFBEC1939B12A00FEB1B6 /* APP_BATTERY_OFF-33.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBCD1939B12A00FEB1B6 /* APP_BATTERY_OFF-33.png */; };
-		C2CCFBED1939B12A00FEB1B6 /* APP_BATTERY_OFF-34.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBCE1939B12A00FEB1B6 /* APP_BATTERY_OFF-34.png */; };
-		C2CCFBEE1939B12A00FEB1B6 /* APP_BATTERY_OFF-35.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBCF1939B12A00FEB1B6 /* APP_BATTERY_OFF-35.png */; };
-		C2CCFBEF1939B12A00FEB1B6 /* APP_BATTERY_OFF-36.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD01939B12A00FEB1B6 /* APP_BATTERY_OFF-36.png */; };
-		C2CCFBF01939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD11939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png */; };
-		C2CCFBF11939B12A00FEB1B6 /* APP_BATTERY_OFF-38.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD21939B12A00FEB1B6 /* APP_BATTERY_OFF-38.png */; };
-		C2CCFBF21939B12A00FEB1B6 /* APP_BATTERY_OFF-39.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD31939B12A00FEB1B6 /* APP_BATTERY_OFF-39.png */; };
-		C2CCFBF31939B12A00FEB1B6 /* APP_BATTERY_OFF-40.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD41939B12A00FEB1B6 /* APP_BATTERY_OFF-40.png */; };
-		C2CCFBF41939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD51939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png */; };
-		C2CCFBF51939B12A00FEB1B6 /* APP_BATTERY_OFF-42.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD61939B12A00FEB1B6 /* APP_BATTERY_OFF-42.png */; };
-		C2CCFBF61939B12A00FEB1B6 /* APP_BATTERY_OFF-43.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD71939B12A00FEB1B6 /* APP_BATTERY_OFF-43.png */; };
-		C2CCFBF71939B12A00FEB1B6 /* APP_BATTERY_OFF-44.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD81939B12A00FEB1B6 /* APP_BATTERY_OFF-44.png */; };
-		C2CCFBF81939B12A00FEB1B6 /* APP_BATTERY_OFF-45.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBD91939B12A00FEB1B6 /* APP_BATTERY_OFF-45.png */; };
-		C2CCFC261939B18900FEB1B6 /* APP_BATTERY_ON-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBF91939B18900FEB1B6 /* APP_BATTERY_ON-01.png */; };
-		C2CCFC271939B18900FEB1B6 /* APP_BATTERY_ON-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBFA1939B18900FEB1B6 /* APP_BATTERY_ON-02.png */; };
-		C2CCFC281939B18900FEB1B6 /* APP_BATTERY_ON-03.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBFB1939B18900FEB1B6 /* APP_BATTERY_ON-03.png */; };
-		C2CCFC291939B18900FEB1B6 /* APP_BATTERY_ON-04.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBFC1939B18900FEB1B6 /* APP_BATTERY_ON-04.png */; };
-		C2CCFC2A1939B18900FEB1B6 /* APP_BATTERY_ON-05.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBFD1939B18900FEB1B6 /* APP_BATTERY_ON-05.png */; };
-		C2CCFC2B1939B18900FEB1B6 /* APP_BATTERY_ON-06.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBFE1939B18900FEB1B6 /* APP_BATTERY_ON-06.png */; };
-		C2CCFC2C1939B18900FEB1B6 /* APP_BATTERY_ON-07.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFBFF1939B18900FEB1B6 /* APP_BATTERY_ON-07.png */; };
-		C2CCFC2D1939B18900FEB1B6 /* APP_BATTERY_ON-08.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC001939B18900FEB1B6 /* APP_BATTERY_ON-08.png */; };
-		C2CCFC2E1939B18900FEB1B6 /* APP_BATTERY_ON-09.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC011939B18900FEB1B6 /* APP_BATTERY_ON-09.png */; };
-		C2CCFC2F1939B18900FEB1B6 /* APP_BATTERY_ON-10.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC021939B18900FEB1B6 /* APP_BATTERY_ON-10.png */; };
-		C2CCFC301939B18900FEB1B6 /* APP_BATTERY_ON-11.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC031939B18900FEB1B6 /* APP_BATTERY_ON-11.png */; };
-		C2CCFC311939B18900FEB1B6 /* APP_BATTERY_ON-12.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC041939B18900FEB1B6 /* APP_BATTERY_ON-12.png */; };
-		C2CCFC321939B18900FEB1B6 /* APP_BATTERY_ON-13.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC051939B18900FEB1B6 /* APP_BATTERY_ON-13.png */; };
-		C2CCFC331939B18900FEB1B6 /* APP_BATTERY_ON-14.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC061939B18900FEB1B6 /* APP_BATTERY_ON-14.png */; };
-		C2CCFC341939B18900FEB1B6 /* APP_BATTERY_ON-15.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC071939B18900FEB1B6 /* APP_BATTERY_ON-15.png */; };
-		C2CCFC351939B18900FEB1B6 /* APP_BATTERY_ON-16.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC081939B18900FEB1B6 /* APP_BATTERY_ON-16.png */; };
-		C2CCFC361939B18900FEB1B6 /* APP_BATTERY_ON-17.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC091939B18900FEB1B6 /* APP_BATTERY_ON-17.png */; };
-		C2CCFC371939B18900FEB1B6 /* APP_BATTERY_ON-18.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC0A1939B18900FEB1B6 /* APP_BATTERY_ON-18.png */; };
-		C2CCFC381939B18900FEB1B6 /* APP_BATTERY_ON-19.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC0B1939B18900FEB1B6 /* APP_BATTERY_ON-19.png */; };
-		C2CCFC391939B18900FEB1B6 /* APP_BATTERY_ON-20.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC0C1939B18900FEB1B6 /* APP_BATTERY_ON-20.png */; };
-		C2CCFC3A1939B18900FEB1B6 /* APP_BATTERY_ON-21.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC0D1939B18900FEB1B6 /* APP_BATTERY_ON-21.png */; };
-		C2CCFC3B1939B18900FEB1B6 /* APP_BATTERY_ON-22.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC0E1939B18900FEB1B6 /* APP_BATTERY_ON-22.png */; };
-		C2CCFC3C1939B18900FEB1B6 /* APP_BATTERY_ON-23.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC0F1939B18900FEB1B6 /* APP_BATTERY_ON-23.png */; };
-		C2CCFC3D1939B18900FEB1B6 /* APP_BATTERY_ON-24.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC101939B18900FEB1B6 /* APP_BATTERY_ON-24.png */; };
-		C2CCFC3E1939B18900FEB1B6 /* APP_BATTERY_ON-25.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC111939B18900FEB1B6 /* APP_BATTERY_ON-25.png */; };
-		C2CCFC3F1939B18900FEB1B6 /* APP_BATTERY_ON-26.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC121939B18900FEB1B6 /* APP_BATTERY_ON-26.png */; };
-		C2CCFC401939B18900FEB1B6 /* APP_BATTERY_ON-27.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC131939B18900FEB1B6 /* APP_BATTERY_ON-27.png */; };
-		C2CCFC411939B18900FEB1B6 /* APP_BATTERY_ON-28.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC141939B18900FEB1B6 /* APP_BATTERY_ON-28.png */; };
-		C2CCFC421939B18900FEB1B6 /* APP_BATTERY_ON-29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC151939B18900FEB1B6 /* APP_BATTERY_ON-29.png */; };
-		C2CCFC431939B18900FEB1B6 /* APP_BATTERY_ON-30.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC161939B18900FEB1B6 /* APP_BATTERY_ON-30.png */; };
-		C2CCFC441939B18900FEB1B6 /* APP_BATTERY_ON-31.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC171939B18900FEB1B6 /* APP_BATTERY_ON-31.png */; };
-		C2CCFC451939B18900FEB1B6 /* APP_BATTERY_ON-32.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC181939B18900FEB1B6 /* APP_BATTERY_ON-32.png */; };
-		C2CCFC461939B18900FEB1B6 /* APP_BATTERY_ON-33.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC191939B18900FEB1B6 /* APP_BATTERY_ON-33.png */; };
-		C2CCFC471939B18900FEB1B6 /* APP_BATTERY_ON-34.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC1A1939B18900FEB1B6 /* APP_BATTERY_ON-34.png */; };
-		C2CCFC481939B18900FEB1B6 /* APP_BATTERY_ON-35.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC1B1939B18900FEB1B6 /* APP_BATTERY_ON-35.png */; };
-		C2CCFC491939B18900FEB1B6 /* APP_BATTERY_ON-36.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC1C1939B18900FEB1B6 /* APP_BATTERY_ON-36.png */; };
-		C2CCFC4A1939B18900FEB1B6 /* APP_BATTERY_ON-37.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC1D1939B18900FEB1B6 /* APP_BATTERY_ON-37.png */; };
-		C2CCFC4B1939B18900FEB1B6 /* APP_BATTERY_ON-38.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC1E1939B18900FEB1B6 /* APP_BATTERY_ON-38.png */; };
-		C2CCFC4C1939B18900FEB1B6 /* APP_BATTERY_ON-39.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC1F1939B18900FEB1B6 /* APP_BATTERY_ON-39.png */; };
-		C2CCFC4D1939B18900FEB1B6 /* APP_BATTERY_ON-40.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC201939B18900FEB1B6 /* APP_BATTERY_ON-40.png */; };
-		C2CCFC4E1939B18900FEB1B6 /* APP_BATTERY_ON-41.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC211939B18900FEB1B6 /* APP_BATTERY_ON-41.png */; };
-		C2CCFC4F1939B18900FEB1B6 /* APP_BATTERY_ON-42.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC221939B18900FEB1B6 /* APP_BATTERY_ON-42.png */; };
-		C2CCFC501939B18900FEB1B6 /* APP_BATTERY_ON-43.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC231939B18900FEB1B6 /* APP_BATTERY_ON-43.png */; };
-		C2CCFC511939B18900FEB1B6 /* APP_BATTERY_ON-44.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC241939B18900FEB1B6 /* APP_BATTERY_ON-44.png */; };
-		C2CCFC521939B18900FEB1B6 /* APP_BATTERY_ON-45.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CCFC251939B18900FEB1B6 /* APP_BATTERY_ON-45.png */; };
 		C2D683B1191D42EF00C3F7E5 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D683B0191D42EF00C3F7E5 /* ActivityViewController.m */; };
 		C2D683B5191D756400C3F7E5 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D683B4191D756400C3F7E5 /* ContainerViewController.m */; };
 		C2D683B9191D778F00C3F7E5 /* ActivityGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D683B8191D778F00C3F7E5 /* ActivityGridViewController.m */; };
@@ -226,15 +132,12 @@
 		A3D761841B10EBCB0086064E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		A3D761851B10EBCB0086064E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		A3D761861B10EBCB0086064E /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
-		A3D7618A1B10FCF40086064E /* +20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "+20.png"; sourceTree = "<group>"; };
 		A3D7618B1B10FCF40086064E /* CHECKMARK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CHECKMARK.png; sourceTree = "<group>"; };
 		A3D7618C1B10FCF40086064E /* Design1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design1.png; sourceTree = "<group>"; };
 		A3D7618D1B10FCF40086064E /* Design2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design2.png; sourceTree = "<group>"; };
 		A3D7618E1B10FCF40086064E /* Design3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design3.png; sourceTree = "<group>"; };
 		A3D7618F1B10FCF40086064E /* Design4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design4.png; sourceTree = "<group>"; };
 		A3D761901B10FCF40086064E /* Design5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Design5.png; sourceTree = "<group>"; };
-		A3D761911B10FCF40086064E /* read_background_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_background_old.png; sourceTree = "<group>"; };
-		A3D761921B10FCF40086064E /* -20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "-20.png"; sourceTree = "<group>"; };
 		A3D7619D1B138CB40086064E /* PrizesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizesViewController.h; sourceTree = "<group>"; };
 		A3D7619E1B138CB40086064E /* PrizesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizesViewController.m; sourceTree = "<group>"; };
 		A3E1E8D21B0A3B6500191507 /* UIColor+SJPLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SJPLColors.h"; sourceTree = "<group>"; };
@@ -251,7 +154,6 @@
 		C248343A192EA10600539C98 /* PRIZES_4_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRIZES_4_1.png; sourceTree = "<group>"; };
 		C248343C192EA10600539C98 /* PRIZES_5_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRIZES_5_0.png; sourceTree = "<group>"; };
 		C248343D192EA10600539C98 /* PRIZES_5_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PRIZES_5_1.png; sourceTree = "<group>"; };
-		C248349D192EA10600539C98 /* APP Robot ON-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP Robot ON-01.png"; sourceTree = "<group>"; };
 		C24FDF2319195819009C7A9A /* SanJoseLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanJoseLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24FDF2619195819009C7A9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C24FDF2819195819009C7A9A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -316,20 +218,6 @@
 		C2981F711920348900DEBA0D /* ReadingLogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingLogCell.m; sourceTree = "<group>"; };
 		C2981F73192034A300DEBA0D /* ActivityGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityGridCell.h; sourceTree = "<group>"; };
 		C2981F74192034A300DEBA0D /* ActivityGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityGridCell.m; sourceTree = "<group>"; };
-		C29A2BAC192475D9000CE3DF /* APP_BATTERY_OFF-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-01.png"; sourceTree = "<group>"; };
-		C29A2BAD192475D9000CE3DF /* APP_BATTERY_OFF-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-02.png"; sourceTree = "<group>"; };
-		C29A2BAE192475D9000CE3DF /* APP_BATTERY_OFF-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-03.png"; sourceTree = "<group>"; };
-		C29A2BAF192475D9000CE3DF /* APP_BATTERY_OFF-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-04.png"; sourceTree = "<group>"; };
-		C29A2BB0192475D9000CE3DF /* APP_BATTERY_OFF-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-05.png"; sourceTree = "<group>"; };
-		C29A2BB1192475D9000CE3DF /* APP_BATTERY_OFF-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-06.png"; sourceTree = "<group>"; };
-		C29A2BB2192475D9000CE3DF /* APP_BATTERY_OFF-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-07.png"; sourceTree = "<group>"; };
-		C29A2BB3192475D9000CE3DF /* APP_BATTERY_OFF-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-08.png"; sourceTree = "<group>"; };
-		C29A2BB4192475D9000CE3DF /* APP_BATTERY_OFF-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-09.png"; sourceTree = "<group>"; };
-		C29A2BB5192475D9000CE3DF /* APP_BATTERY_OFF-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-10.png"; sourceTree = "<group>"; };
-		C29A2BB6192475D9000CE3DF /* APP_BATTERY_OFF-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-11.png"; sourceTree = "<group>"; };
-		C29A2BB7192475D9000CE3DF /* APP_BATTERY_OFF-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-12.png"; sourceTree = "<group>"; };
-		C29A2BB8192475D9000CE3DF /* APP_BATTERY_OFF-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-13.png"; sourceTree = "<group>"; };
-		C29A2BB9192475D9000CE3DF /* APP_BATTERY_OFF-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-14.png"; sourceTree = "<group>"; };
 		C2CB4DC4191BF5A200BA3FBD /* Utillities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utillities.h; sourceTree = "<group>"; };
 		C2CB4DC5191BF5A200BA3FBD /* Utillities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utillities.m; sourceTree = "<group>"; };
 		C2CB4DC7191BFFBF00BA3FBD /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = ../RegisterViewController.h; sourceTree = "<group>"; };
@@ -342,82 +230,6 @@
 		C2CCFBB61939361E00FEB1B6 /* SelectMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMemberViewController.m; sourceTree = "<group>"; };
 		C2CCFBB8193937A700FEB1B6 /* MemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCell.h; sourceTree = "<group>"; };
 		C2CCFBB9193937A700FEB1B6 /* MemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCell.m; sourceTree = "<group>"; };
-		C2CCFBBB1939B12A00FEB1B6 /* APP_BATTERY_OFF-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-15.png"; sourceTree = "<group>"; };
-		C2CCFBBC1939B12A00FEB1B6 /* APP_BATTERY_OFF-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-16.png"; sourceTree = "<group>"; };
-		C2CCFBBD1939B12A00FEB1B6 /* APP_BATTERY_OFF-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-17.png"; sourceTree = "<group>"; };
-		C2CCFBBE1939B12A00FEB1B6 /* APP_BATTERY_OFF-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-18.png"; sourceTree = "<group>"; };
-		C2CCFBBF1939B12A00FEB1B6 /* APP_BATTERY_OFF-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-19.png"; sourceTree = "<group>"; };
-		C2CCFBC01939B12A00FEB1B6 /* APP_BATTERY_OFF-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-20.png"; sourceTree = "<group>"; };
-		C2CCFBC11939B12A00FEB1B6 /* APP_BATTERY_OFF-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-21.png"; sourceTree = "<group>"; };
-		C2CCFBC21939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-22.png"; sourceTree = "<group>"; };
-		C2CCFBC31939B12A00FEB1B6 /* APP_BATTERY_OFF-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-23.png"; sourceTree = "<group>"; };
-		C2CCFBC41939B12A00FEB1B6 /* APP_BATTERY_OFF-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-24.png"; sourceTree = "<group>"; };
-		C2CCFBC51939B12A00FEB1B6 /* APP_BATTERY_OFF-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-25.png"; sourceTree = "<group>"; };
-		C2CCFBC61939B12A00FEB1B6 /* APP_BATTERY_OFF-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-26.png"; sourceTree = "<group>"; };
-		C2CCFBC71939B12A00FEB1B6 /* APP_BATTERY_OFF-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-27.png"; sourceTree = "<group>"; };
-		C2CCFBC81939B12A00FEB1B6 /* APP_BATTERY_OFF-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-28.png"; sourceTree = "<group>"; };
-		C2CCFBC91939B12A00FEB1B6 /* APP_BATTERY_OFF-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-29.png"; sourceTree = "<group>"; };
-		C2CCFBCA1939B12A00FEB1B6 /* APP_BATTERY_OFF-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-30.png"; sourceTree = "<group>"; };
-		C2CCFBCB1939B12A00FEB1B6 /* APP_BATTERY_OFF-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-31.png"; sourceTree = "<group>"; };
-		C2CCFBCC1939B12A00FEB1B6 /* APP_BATTERY_OFF-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-32.png"; sourceTree = "<group>"; };
-		C2CCFBCD1939B12A00FEB1B6 /* APP_BATTERY_OFF-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-33.png"; sourceTree = "<group>"; };
-		C2CCFBCE1939B12A00FEB1B6 /* APP_BATTERY_OFF-34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-34.png"; sourceTree = "<group>"; };
-		C2CCFBCF1939B12A00FEB1B6 /* APP_BATTERY_OFF-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-35.png"; sourceTree = "<group>"; };
-		C2CCFBD01939B12A00FEB1B6 /* APP_BATTERY_OFF-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-36.png"; sourceTree = "<group>"; };
-		C2CCFBD11939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-37.png"; sourceTree = "<group>"; };
-		C2CCFBD21939B12A00FEB1B6 /* APP_BATTERY_OFF-38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-38.png"; sourceTree = "<group>"; };
-		C2CCFBD31939B12A00FEB1B6 /* APP_BATTERY_OFF-39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-39.png"; sourceTree = "<group>"; };
-		C2CCFBD41939B12A00FEB1B6 /* APP_BATTERY_OFF-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-40.png"; sourceTree = "<group>"; };
-		C2CCFBD51939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-41.png"; sourceTree = "<group>"; };
-		C2CCFBD61939B12A00FEB1B6 /* APP_BATTERY_OFF-42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-42.png"; sourceTree = "<group>"; };
-		C2CCFBD71939B12A00FEB1B6 /* APP_BATTERY_OFF-43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-43.png"; sourceTree = "<group>"; };
-		C2CCFBD81939B12A00FEB1B6 /* APP_BATTERY_OFF-44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-44.png"; sourceTree = "<group>"; };
-		C2CCFBD91939B12A00FEB1B6 /* APP_BATTERY_OFF-45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_OFF-45.png"; sourceTree = "<group>"; };
-		C2CCFBF91939B18900FEB1B6 /* APP_BATTERY_ON-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-01.png"; sourceTree = "<group>"; };
-		C2CCFBFA1939B18900FEB1B6 /* APP_BATTERY_ON-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-02.png"; sourceTree = "<group>"; };
-		C2CCFBFB1939B18900FEB1B6 /* APP_BATTERY_ON-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-03.png"; sourceTree = "<group>"; };
-		C2CCFBFC1939B18900FEB1B6 /* APP_BATTERY_ON-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-04.png"; sourceTree = "<group>"; };
-		C2CCFBFD1939B18900FEB1B6 /* APP_BATTERY_ON-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-05.png"; sourceTree = "<group>"; };
-		C2CCFBFE1939B18900FEB1B6 /* APP_BATTERY_ON-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-06.png"; sourceTree = "<group>"; };
-		C2CCFBFF1939B18900FEB1B6 /* APP_BATTERY_ON-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-07.png"; sourceTree = "<group>"; };
-		C2CCFC001939B18900FEB1B6 /* APP_BATTERY_ON-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-08.png"; sourceTree = "<group>"; };
-		C2CCFC011939B18900FEB1B6 /* APP_BATTERY_ON-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-09.png"; sourceTree = "<group>"; };
-		C2CCFC021939B18900FEB1B6 /* APP_BATTERY_ON-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-10.png"; sourceTree = "<group>"; };
-		C2CCFC031939B18900FEB1B6 /* APP_BATTERY_ON-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-11.png"; sourceTree = "<group>"; };
-		C2CCFC041939B18900FEB1B6 /* APP_BATTERY_ON-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-12.png"; sourceTree = "<group>"; };
-		C2CCFC051939B18900FEB1B6 /* APP_BATTERY_ON-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-13.png"; sourceTree = "<group>"; };
-		C2CCFC061939B18900FEB1B6 /* APP_BATTERY_ON-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-14.png"; sourceTree = "<group>"; };
-		C2CCFC071939B18900FEB1B6 /* APP_BATTERY_ON-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-15.png"; sourceTree = "<group>"; };
-		C2CCFC081939B18900FEB1B6 /* APP_BATTERY_ON-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-16.png"; sourceTree = "<group>"; };
-		C2CCFC091939B18900FEB1B6 /* APP_BATTERY_ON-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-17.png"; sourceTree = "<group>"; };
-		C2CCFC0A1939B18900FEB1B6 /* APP_BATTERY_ON-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-18.png"; sourceTree = "<group>"; };
-		C2CCFC0B1939B18900FEB1B6 /* APP_BATTERY_ON-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-19.png"; sourceTree = "<group>"; };
-		C2CCFC0C1939B18900FEB1B6 /* APP_BATTERY_ON-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-20.png"; sourceTree = "<group>"; };
-		C2CCFC0D1939B18900FEB1B6 /* APP_BATTERY_ON-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-21.png"; sourceTree = "<group>"; };
-		C2CCFC0E1939B18900FEB1B6 /* APP_BATTERY_ON-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-22.png"; sourceTree = "<group>"; };
-		C2CCFC0F1939B18900FEB1B6 /* APP_BATTERY_ON-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-23.png"; sourceTree = "<group>"; };
-		C2CCFC101939B18900FEB1B6 /* APP_BATTERY_ON-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-24.png"; sourceTree = "<group>"; };
-		C2CCFC111939B18900FEB1B6 /* APP_BATTERY_ON-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-25.png"; sourceTree = "<group>"; };
-		C2CCFC121939B18900FEB1B6 /* APP_BATTERY_ON-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-26.png"; sourceTree = "<group>"; };
-		C2CCFC131939B18900FEB1B6 /* APP_BATTERY_ON-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-27.png"; sourceTree = "<group>"; };
-		C2CCFC141939B18900FEB1B6 /* APP_BATTERY_ON-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-28.png"; sourceTree = "<group>"; };
-		C2CCFC151939B18900FEB1B6 /* APP_BATTERY_ON-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-29.png"; sourceTree = "<group>"; };
-		C2CCFC161939B18900FEB1B6 /* APP_BATTERY_ON-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-30.png"; sourceTree = "<group>"; };
-		C2CCFC171939B18900FEB1B6 /* APP_BATTERY_ON-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-31.png"; sourceTree = "<group>"; };
-		C2CCFC181939B18900FEB1B6 /* APP_BATTERY_ON-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-32.png"; sourceTree = "<group>"; };
-		C2CCFC191939B18900FEB1B6 /* APP_BATTERY_ON-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-33.png"; sourceTree = "<group>"; };
-		C2CCFC1A1939B18900FEB1B6 /* APP_BATTERY_ON-34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-34.png"; sourceTree = "<group>"; };
-		C2CCFC1B1939B18900FEB1B6 /* APP_BATTERY_ON-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-35.png"; sourceTree = "<group>"; };
-		C2CCFC1C1939B18900FEB1B6 /* APP_BATTERY_ON-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-36.png"; sourceTree = "<group>"; };
-		C2CCFC1D1939B18900FEB1B6 /* APP_BATTERY_ON-37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-37.png"; sourceTree = "<group>"; };
-		C2CCFC1E1939B18900FEB1B6 /* APP_BATTERY_ON-38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-38.png"; sourceTree = "<group>"; };
-		C2CCFC1F1939B18900FEB1B6 /* APP_BATTERY_ON-39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-39.png"; sourceTree = "<group>"; };
-		C2CCFC201939B18900FEB1B6 /* APP_BATTERY_ON-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-40.png"; sourceTree = "<group>"; };
-		C2CCFC211939B18900FEB1B6 /* APP_BATTERY_ON-41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-41.png"; sourceTree = "<group>"; };
-		C2CCFC221939B18900FEB1B6 /* APP_BATTERY_ON-42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-42.png"; sourceTree = "<group>"; };
-		C2CCFC231939B18900FEB1B6 /* APP_BATTERY_ON-43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-43.png"; sourceTree = "<group>"; };
-		C2CCFC241939B18900FEB1B6 /* APP_BATTERY_ON-44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-44.png"; sourceTree = "<group>"; };
-		C2CCFC251939B18900FEB1B6 /* APP_BATTERY_ON-45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP_BATTERY_ON-45.png"; sourceTree = "<group>"; };
 		C2D683AF191D42EF00C3F7E5 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityViewController.h; path = ../ActivityViewController.h; sourceTree = "<group>"; };
 		C2D683B0191D42EF00C3F7E5 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityViewController.m; path = ../ActivityViewController.m; sourceTree = "<group>"; };
 		C2D683B3191D756400C3F7E5 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
@@ -517,29 +329,15 @@
 			isa = PBXGroup;
 			children = (
 				A371C4271B2175A90044F3EC /* read_background.png */,
-				A3D7618A1B10FCF40086064E /* +20.png */,
 				A3D7618B1B10FCF40086064E /* CHECKMARK.png */,
 				A3D7618C1B10FCF40086064E /* Design1.png */,
 				A3D7618D1B10FCF40086064E /* Design2.png */,
 				A3D7618E1B10FCF40086064E /* Design3.png */,
 				A3D7618F1B10FCF40086064E /* Design4.png */,
 				A3D761901B10FCF40086064E /* Design5.png */,
-				A3D761911B10FCF40086064E /* read_background_old.png */,
-				A3D761921B10FCF40086064E /* -20.png */,
-				C29A2BAB192475D9000CE3DF /* APP Battery OFF */,
-				C29A2B4F1924757C000CE3DF /* APP Battery ON */,
-				C248349C192EA10600539C98 /* APP ROBOT ON */,
 			);
 			name = Read;
 			path = "SRC App 2/Robot Battery";
-			sourceTree = "<group>";
-		};
-		C248349C192EA10600539C98 /* APP ROBOT ON */ = {
-			isa = PBXGroup;
-			children = (
-				C248349D192EA10600539C98 /* APP Robot ON-01.png */,
-			);
-			path = "APP ROBOT ON";
 			sourceTree = "<group>";
 		};
 		C24FDF1A19195819009C7A9A = {
@@ -717,59 +515,6 @@
 			name = SelectMember;
 			sourceTree = "<group>";
 		};
-		C29A2B4F1924757C000CE3DF /* APP Battery ON */ = {
-			isa = PBXGroup;
-			children = (
-				C2CCFBF91939B18900FEB1B6 /* APP_BATTERY_ON-01.png */,
-				C2CCFBFA1939B18900FEB1B6 /* APP_BATTERY_ON-02.png */,
-				C2CCFBFB1939B18900FEB1B6 /* APP_BATTERY_ON-03.png */,
-				C2CCFBFC1939B18900FEB1B6 /* APP_BATTERY_ON-04.png */,
-				C2CCFBFD1939B18900FEB1B6 /* APP_BATTERY_ON-05.png */,
-				C2CCFBFE1939B18900FEB1B6 /* APP_BATTERY_ON-06.png */,
-				C2CCFBFF1939B18900FEB1B6 /* APP_BATTERY_ON-07.png */,
-				C2CCFC001939B18900FEB1B6 /* APP_BATTERY_ON-08.png */,
-				C2CCFC011939B18900FEB1B6 /* APP_BATTERY_ON-09.png */,
-				C2CCFC021939B18900FEB1B6 /* APP_BATTERY_ON-10.png */,
-				C2CCFC031939B18900FEB1B6 /* APP_BATTERY_ON-11.png */,
-				C2CCFC041939B18900FEB1B6 /* APP_BATTERY_ON-12.png */,
-				C2CCFC051939B18900FEB1B6 /* APP_BATTERY_ON-13.png */,
-				C2CCFC061939B18900FEB1B6 /* APP_BATTERY_ON-14.png */,
-				C2CCFC071939B18900FEB1B6 /* APP_BATTERY_ON-15.png */,
-				C2CCFC081939B18900FEB1B6 /* APP_BATTERY_ON-16.png */,
-				C2CCFC091939B18900FEB1B6 /* APP_BATTERY_ON-17.png */,
-				C2CCFC0A1939B18900FEB1B6 /* APP_BATTERY_ON-18.png */,
-				C2CCFC0B1939B18900FEB1B6 /* APP_BATTERY_ON-19.png */,
-				C2CCFC0C1939B18900FEB1B6 /* APP_BATTERY_ON-20.png */,
-				C2CCFC0D1939B18900FEB1B6 /* APP_BATTERY_ON-21.png */,
-				C2CCFC0E1939B18900FEB1B6 /* APP_BATTERY_ON-22.png */,
-				C2CCFC0F1939B18900FEB1B6 /* APP_BATTERY_ON-23.png */,
-				C2CCFC101939B18900FEB1B6 /* APP_BATTERY_ON-24.png */,
-				C2CCFC111939B18900FEB1B6 /* APP_BATTERY_ON-25.png */,
-				C2CCFC121939B18900FEB1B6 /* APP_BATTERY_ON-26.png */,
-				C2CCFC131939B18900FEB1B6 /* APP_BATTERY_ON-27.png */,
-				C2CCFC141939B18900FEB1B6 /* APP_BATTERY_ON-28.png */,
-				C2CCFC151939B18900FEB1B6 /* APP_BATTERY_ON-29.png */,
-				C2CCFC161939B18900FEB1B6 /* APP_BATTERY_ON-30.png */,
-				C2CCFC171939B18900FEB1B6 /* APP_BATTERY_ON-31.png */,
-				C2CCFC181939B18900FEB1B6 /* APP_BATTERY_ON-32.png */,
-				C2CCFC191939B18900FEB1B6 /* APP_BATTERY_ON-33.png */,
-				C2CCFC1A1939B18900FEB1B6 /* APP_BATTERY_ON-34.png */,
-				C2CCFC1B1939B18900FEB1B6 /* APP_BATTERY_ON-35.png */,
-				C2CCFC1C1939B18900FEB1B6 /* APP_BATTERY_ON-36.png */,
-				C2CCFC1D1939B18900FEB1B6 /* APP_BATTERY_ON-37.png */,
-				C2CCFC1E1939B18900FEB1B6 /* APP_BATTERY_ON-38.png */,
-				C2CCFC1F1939B18900FEB1B6 /* APP_BATTERY_ON-39.png */,
-				C2CCFC201939B18900FEB1B6 /* APP_BATTERY_ON-40.png */,
-				C2CCFC211939B18900FEB1B6 /* APP_BATTERY_ON-41.png */,
-				C2CCFC221939B18900FEB1B6 /* APP_BATTERY_ON-42.png */,
-				C2CCFC231939B18900FEB1B6 /* APP_BATTERY_ON-43.png */,
-				C2CCFC241939B18900FEB1B6 /* APP_BATTERY_ON-44.png */,
-				C2CCFC251939B18900FEB1B6 /* APP_BATTERY_ON-45.png */,
-			);
-			name = "APP Battery ON";
-			path = "../../APP Battery ON";
-			sourceTree = "<group>";
-		};
 		C29A2BAA19247598000CE3DF /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,59 +526,6 @@
 				C254855E192BE0330007DFC6 /* Information Screen Assets */,
 			);
 			name = images;
-			sourceTree = "<group>";
-		};
-		C29A2BAB192475D9000CE3DF /* APP Battery OFF */ = {
-			isa = PBXGroup;
-			children = (
-				C29A2BAC192475D9000CE3DF /* APP_BATTERY_OFF-01.png */,
-				C29A2BAD192475D9000CE3DF /* APP_BATTERY_OFF-02.png */,
-				C29A2BAE192475D9000CE3DF /* APP_BATTERY_OFF-03.png */,
-				C29A2BAF192475D9000CE3DF /* APP_BATTERY_OFF-04.png */,
-				C29A2BB0192475D9000CE3DF /* APP_BATTERY_OFF-05.png */,
-				C29A2BB1192475D9000CE3DF /* APP_BATTERY_OFF-06.png */,
-				C29A2BB2192475D9000CE3DF /* APP_BATTERY_OFF-07.png */,
-				C29A2BB3192475D9000CE3DF /* APP_BATTERY_OFF-08.png */,
-				C29A2BB4192475D9000CE3DF /* APP_BATTERY_OFF-09.png */,
-				C29A2BB5192475D9000CE3DF /* APP_BATTERY_OFF-10.png */,
-				C29A2BB6192475D9000CE3DF /* APP_BATTERY_OFF-11.png */,
-				C29A2BB7192475D9000CE3DF /* APP_BATTERY_OFF-12.png */,
-				C29A2BB8192475D9000CE3DF /* APP_BATTERY_OFF-13.png */,
-				C29A2BB9192475D9000CE3DF /* APP_BATTERY_OFF-14.png */,
-				C2CCFBBB1939B12A00FEB1B6 /* APP_BATTERY_OFF-15.png */,
-				C2CCFBBC1939B12A00FEB1B6 /* APP_BATTERY_OFF-16.png */,
-				C2CCFBBD1939B12A00FEB1B6 /* APP_BATTERY_OFF-17.png */,
-				C2CCFBBE1939B12A00FEB1B6 /* APP_BATTERY_OFF-18.png */,
-				C2CCFBBF1939B12A00FEB1B6 /* APP_BATTERY_OFF-19.png */,
-				C2CCFBC01939B12A00FEB1B6 /* APP_BATTERY_OFF-20.png */,
-				C2CCFBC11939B12A00FEB1B6 /* APP_BATTERY_OFF-21.png */,
-				C2CCFBC21939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png */,
-				C2CCFBC31939B12A00FEB1B6 /* APP_BATTERY_OFF-23.png */,
-				C2CCFBC41939B12A00FEB1B6 /* APP_BATTERY_OFF-24.png */,
-				C2CCFBC51939B12A00FEB1B6 /* APP_BATTERY_OFF-25.png */,
-				C2CCFBC61939B12A00FEB1B6 /* APP_BATTERY_OFF-26.png */,
-				C2CCFBC71939B12A00FEB1B6 /* APP_BATTERY_OFF-27.png */,
-				C2CCFBC81939B12A00FEB1B6 /* APP_BATTERY_OFF-28.png */,
-				C2CCFBC91939B12A00FEB1B6 /* APP_BATTERY_OFF-29.png */,
-				C2CCFBCA1939B12A00FEB1B6 /* APP_BATTERY_OFF-30.png */,
-				C2CCFBCB1939B12A00FEB1B6 /* APP_BATTERY_OFF-31.png */,
-				C2CCFBCC1939B12A00FEB1B6 /* APP_BATTERY_OFF-32.png */,
-				C2CCFBCD1939B12A00FEB1B6 /* APP_BATTERY_OFF-33.png */,
-				C2CCFBCE1939B12A00FEB1B6 /* APP_BATTERY_OFF-34.png */,
-				C2CCFBCF1939B12A00FEB1B6 /* APP_BATTERY_OFF-35.png */,
-				C2CCFBD01939B12A00FEB1B6 /* APP_BATTERY_OFF-36.png */,
-				C2CCFBD11939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png */,
-				C2CCFBD21939B12A00FEB1B6 /* APP_BATTERY_OFF-38.png */,
-				C2CCFBD31939B12A00FEB1B6 /* APP_BATTERY_OFF-39.png */,
-				C2CCFBD41939B12A00FEB1B6 /* APP_BATTERY_OFF-40.png */,
-				C2CCFBD51939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png */,
-				C2CCFBD61939B12A00FEB1B6 /* APP_BATTERY_OFF-42.png */,
-				C2CCFBD71939B12A00FEB1B6 /* APP_BATTERY_OFF-43.png */,
-				C2CCFBD81939B12A00FEB1B6 /* APP_BATTERY_OFF-44.png */,
-				C2CCFBD91939B12A00FEB1B6 /* APP_BATTERY_OFF-45.png */,
-			);
-			name = "APP Battery OFF";
-			path = "../../APP Battery OFF";
 			sourceTree = "<group>";
 		};
 		C2D683B2191D733C00C3F7E5 /* Viewcontrollers */ = {
@@ -958,142 +650,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2CCFC2D1939B18900FEB1B6 /* APP_BATTERY_ON-08.png in Resources */,
-				C2CCFC2B1939B18900FEB1B6 /* APP_BATTERY_ON-06.png in Resources */,
 				A3D761831B10E7660086064E /* GRID_READ_1.png in Resources */,
 				C24FDF4A19195819009C7A9A /* Images.xcassets in Resources */,
-				C2CCFC461939B18900FEB1B6 /* APP_BATTERY_ON-33.png in Resources */,
-				C2CCFBF41939B12A00FEB1B6 /* APP_BATTERY_OFF-41.png in Resources */,
 				C254855B192BE0190007DFC6 /* pre-reader.png in Resources */,
-				C2CCFC431939B18900FEB1B6 /* APP_BATTERY_ON-30.png in Resources */,
 				A371C4181B2151DD0044F3EC /* energize.png in Resources */,
-				C2CCFC441939B18900FEB1B6 /* APP_BATTERY_ON-31.png in Resources */,
-				C2CCFBE91939B12A00FEB1B6 /* APP_BATTERY_OFF-30.png in Resources */,
-				C2CCFBF51939B12A00FEB1B6 /* APP_BATTERY_OFF-42.png in Resources */,
-				C2CCFBDE1939B12A00FEB1B6 /* APP_BATTERY_OFF-19.png in Resources */,
 				A371C41B1B2151DD0044F3EC /* learn.png in Resources */,
-				C2CCFC2C1939B18900FEB1B6 /* APP_BATTERY_ON-07.png in Resources */,
-				C2CCFBF81939B12A00FEB1B6 /* APP_BATTERY_OFF-45.png in Resources */,
-				C29A2BE3192475D9000CE3DF /* APP_BATTERY_OFF-11.png in Resources */,
-				C2CCFBDC1939B12A00FEB1B6 /* APP_BATTERY_OFF-17.png in Resources */,
 				A371C4281B2175A90044F3EC /* read_background.png in Resources */,
-				C2CCFC421939B18900FEB1B6 /* APP_BATTERY_ON-29.png in Resources */,
 				C2483518192EA10600539C98 /* PRIZES_2_0.png in Resources */,
 				A3D761991B10FCF40086064E /* Design5.png in Resources */,
-				C2CCFBDA1939B12A00FEB1B6 /* APP_BATTERY_OFF-15.png in Resources */,
 				A3D761891B10EBCB0086064E /* background@3x.png in Resources */,
-				C2CCFBE11939B12A00FEB1B6 /* APP_BATTERY_OFF-22.png in Resources */,
-				C2CCFBF01939B12A00FEB1B6 /* APP_BATTERY_OFF-37.png in Resources */,
 				C254855D192BE0190007DFC6 /* staff sjpl.png in Resources */,
-				C2CCFC271939B18900FEB1B6 /* APP_BATTERY_ON-02.png in Resources */,
-				C2CCFC3B1939B18900FEB1B6 /* APP_BATTERY_ON-22.png in Resources */,
 				A3D7617E1B10E7660086064E /* GRID_DISCOVER_0.png in Resources */,
-				C2CCFBEE1939B12A00FEB1B6 /* APP_BATTERY_OFF-35.png in Resources */,
-				C2CCFC4E1939B18900FEB1B6 /* APP_BATTERY_ON-41.png in Resources */,
-				C2CCFBF31939B12A00FEB1B6 /* APP_BATTERY_OFF-40.png in Resources */,
 				A3CFFAAE1B1985BE000B45F6 /* header bar.png in Resources */,
-				C2CCFBEA1939B12A00FEB1B6 /* APP_BATTERY_OFF-31.png in Resources */,
-				C2CCFBEF1939B12A00FEB1B6 /* APP_BATTERY_OFF-36.png in Resources */,
-				C29A2BE6192475D9000CE3DF /* APP_BATTERY_OFF-14.png in Resources */,
-				C29A2BDB192475D9000CE3DF /* APP_BATTERY_OFF-03.png in Resources */,
 				C248351F192EA10600539C98 /* PRIZES_4_1.png in Resources */,
-				C2CCFC341939B18900FEB1B6 /* APP_BATTERY_ON-15.png in Resources */,
-				C2CCFC481939B18900FEB1B6 /* APP_BATTERY_ON-35.png in Resources */,
-				C29A2BE0192475D9000CE3DF /* APP_BATTERY_OFF-08.png in Resources */,
-				C2CCFBF11939B12A00FEB1B6 /* APP_BATTERY_OFF-38.png in Resources */,
-				C29A2BE1192475D9000CE3DF /* APP_BATTERY_OFF-09.png in Resources */,
-				C2CCFC391939B18900FEB1B6 /* APP_BATTERY_ON-20.png in Resources */,
-				C2CCFBE21939B12A00FEB1B6 /* APP_BATTERY_OFF-23.png in Resources */,
-				C2CCFC2E1939B18900FEB1B6 /* APP_BATTERY_ON-09.png in Resources */,
-				C2CCFBE81939B12A00FEB1B6 /* APP_BATTERY_OFF-29.png in Resources */,
-				C2CCFBDB1939B12A00FEB1B6 /* APP_BATTERY_OFF-16.png in Resources */,
 				C2483522192EA10600539C98 /* PRIZES_5_1.png in Resources */,
-				C2CCFC451939B18900FEB1B6 /* APP_BATTERY_ON-32.png in Resources */,
-				C2CCFC4A1939B18900FEB1B6 /* APP_BATTERY_ON-37.png in Resources */,
-				C2CCFBEB1939B12A00FEB1B6 /* APP_BATTERY_OFF-32.png in Resources */,
-				C2CCFC501939B18900FEB1B6 /* APP_BATTERY_ON-43.png in Resources */,
 				A3D761821B10E7660086064E /* GRID_READ_0.png in Resources */,
-				C2CCFC3F1939B18900FEB1B6 /* APP_BATTERY_ON-26.png in Resources */,
-				C2CCFC4F1939B18900FEB1B6 /* APP_BATTERY_ON-42.png in Resources */,
-				C2CCFBF61939B12A00FEB1B6 /* APP_BATTERY_OFF-43.png in Resources */,
 				A3D761941B10FCF40086064E /* CHECKMARK.png in Resources */,
-				C2CCFC3D1939B18900FEB1B6 /* APP_BATTERY_ON-24.png in Resources */,
-				C2CCFBE41939B12A00FEB1B6 /* APP_BATTERY_OFF-25.png in Resources */,
 				A3D761881B10EBCB0086064E /* background@2x.png in Resources */,
-				C2CCFC321939B18900FEB1B6 /* APP_BATTERY_ON-13.png in Resources */,
-				C2CCFC3A1939B18900FEB1B6 /* APP_BATTERY_ON-21.png in Resources */,
-				C2CCFC331939B18900FEB1B6 /* APP_BATTERY_ON-14.png in Resources */,
-				C2CCFC401939B18900FEB1B6 /* APP_BATTERY_ON-27.png in Resources */,
 				C24FDF3C19195819009C7A9A /* Main_iPhone.storyboard in Resources */,
 				C248351C192EA10600539C98 /* PRIZES_3_1.png in Resources */,
 				A3D761801B10E7660086064E /* GRID_LEARN_0.png in Resources */,
-				C2CCFBEC1939B12A00FEB1B6 /* APP_BATTERY_OFF-33.png in Resources */,
 				C294E183193E842B0066AC26 /* PRIZES_2_2.png in Resources */,
-				C2CCFBF71939B12A00FEB1B6 /* APP_BATTERY_OFF-44.png in Resources */,
-				C2CCFBE51939B12A00FEB1B6 /* APP_BATTERY_OFF-26.png in Resources */,
-				C29A2BDC192475D9000CE3DF /* APP_BATTERY_OFF-04.png in Resources */,
-				C2CCFC3C1939B18900FEB1B6 /* APP_BATTERY_ON-23.png in Resources */,
 				A3D7617D1B10E7660086064E /* GRID_ENERGIZE_1.png in Resources */,
-				C248357E192EA10600539C98 /* APP Robot ON-01.png in Resources */,
 				C248351E192EA10600539C98 /* PRIZES_4_0.png in Resources */,
-				C2CCFC381939B18900FEB1B6 /* APP_BATTERY_ON-19.png in Resources */,
-				C2CCFC411939B18900FEB1B6 /* APP_BATTERY_ON-28.png in Resources */,
 				C248351B192EA10600539C98 /* PRIZES_3_0.png in Resources */,
-				C29A2BD9192475D9000CE3DF /* APP_BATTERY_OFF-01.png in Resources */,
-				C2CCFC301939B18900FEB1B6 /* APP_BATTERY_ON-11.png in Resources */,
 				C2548559192BE0190007DFC6 /* reader.png in Resources */,
 				C24FDF3319195819009C7A9A /* InfoPlist.strings in Resources */,
-				C2CCFC3E1939B18900FEB1B6 /* APP_BATTERY_ON-25.png in Resources */,
-				C29A2BDD192475D9000CE3DF /* APP_BATTERY_OFF-05.png in Resources */,
 				C2483521192EA10600539C98 /* PRIZES_5_0.png in Resources */,
-				C2CCFBE01939B12A00FEB1B6 /* APP_BATTERY_OFF-21.png in Resources */,
 				C254855A192BE0190007DFC6 /* teen.png in Resources */,
 				A3D761871B10EBCB0086064E /* background.png in Resources */,
 				C2548557192BE0190007DFC6 /* adult.png in Resources */,
-				C2CCFC2A1939B18900FEB1B6 /* APP_BATTERY_ON-05.png in Resources */,
 				C2483519192EA10600539C98 /* PRIZES_2_1.png in Resources */,
 				C294E185193E842B0066AC26 /* PRIZES_4_2.png in Resources */,
-				C2CCFBDF1939B12A00FEB1B6 /* APP_BATTERY_OFF-20.png in Resources */,
-				C2CCFBDD1939B12A00FEB1B6 /* APP_BATTERY_OFF-18.png in Resources */,
-				C2CCFC491939B18900FEB1B6 /* APP_BATTERY_ON-36.png in Resources */,
 				A371C4191B2151DD0044F3EC /* explore.png in Resources */,
-				C2CCFBF21939B12A00FEB1B6 /* APP_BATTERY_OFF-39.png in Resources */,
 				C294E186193E842B0066AC26 /* PRIZES_5_2.png in Resources */,
-				C2CCFBE61939B12A00FEB1B6 /* APP_BATTERY_OFF-27.png in Resources */,
 				A3D7617F1B10E7660086064E /* GRID_DISCOVER_1.png in Resources */,
-				C2CCFC521939B18900FEB1B6 /* APP_BATTERY_ON-45.png in Resources */,
 				C294E182193E842B0066AC26 /* PRIZES_1_2.png in Resources */,
-				C2CCFBE71939B12A00FEB1B6 /* APP_BATTERY_OFF-28.png in Resources */,
-				C2CCFC371939B18900FEB1B6 /* APP_BATTERY_ON-18.png in Resources */,
-				C29A2BE5192475D9000CE3DF /* APP_BATTERY_OFF-13.png in Resources */,
 				A3D761961B10FCF40086064E /* Design2.png in Resources */,
-				C2CCFC291939B18900FEB1B6 /* APP_BATTERY_ON-04.png in Resources */,
-				C2CCFC261939B18900FEB1B6 /* APP_BATTERY_ON-01.png in Resources */,
-				C2CCFC351939B18900FEB1B6 /* APP_BATTERY_ON-16.png in Resources */,
 				A371C41C1B2151DD0044F3EC /* read.png in Resources */,
-				C2CCFBED1939B12A00FEB1B6 /* APP_BATTERY_OFF-34.png in Resources */,
-				C2CCFC4D1939B18900FEB1B6 /* APP_BATTERY_ON-40.png in Resources */,
 				C294E184193E842B0066AC26 /* PRIZES_3_2.png in Resources */,
-				A3D7619A1B10FCF40086064E /* read_background_old.png in Resources */,
-				C29A2BE4192475D9000CE3DF /* APP_BATTERY_OFF-12.png in Resources */,
-				C2CCFC4B1939B18900FEB1B6 /* APP_BATTERY_ON-38.png in Resources */,
-				C2CCFC2F1939B18900FEB1B6 /* APP_BATTERY_ON-10.png in Resources */,
-				C2CCFC311939B18900FEB1B6 /* APP_BATTERY_ON-12.png in Resources */,
-				C29A2BE2192475D9000CE3DF /* APP_BATTERY_OFF-10.png in Resources */,
-				C2CCFC471939B18900FEB1B6 /* APP_BATTERY_ON-34.png in Resources */,
 				A3D761811B10E7660086064E /* GRID_LEARN_1.png in Resources */,
-				C2CCFC4C1939B18900FEB1B6 /* APP_BATTERY_ON-39.png in Resources */,
 				C2483516192EA10600539C98 /* PRIZES_1_1.png in Resources */,
-				A3D761931B10FCF40086064E /* +20.png in Resources */,
-				C29A2BDA192475D9000CE3DF /* APP_BATTERY_OFF-02.png in Resources */,
-				C2CCFC281939B18900FEB1B6 /* APP_BATTERY_ON-03.png in Resources */,
 				A3D761951B10FCF40086064E /* Design1.png in Resources */,
-				A3D7619B1B10FCF40086064E /* -20.png in Resources */,
-				C2CCFC511939B18900FEB1B6 /* APP_BATTERY_ON-44.png in Resources */,
-				C29A2BDF192475D9000CE3DF /* APP_BATTERY_OFF-07.png in Resources */,
-				C2CCFC361939B18900FEB1B6 /* APP_BATTERY_ON-17.png in Resources */,
-				C2CCFBE31939B12A00FEB1B6 /* APP_BATTERY_OFF-24.png in Resources */,
-				C29A2BDE192475D9000CE3DF /* APP_BATTERY_OFF-06.png in Resources */,
 				A3D7617C1B10E7660086064E /* GRID_ENERGIZE_0.png in Resources */,
 				A371C41A1B2151DD0044F3EC /* help-iPhone.html in Resources */,
 				A3D761981B10FCF40086064E /* Design4.png in Resources */,

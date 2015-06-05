@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class PrizeType;
+@class User;
 
 @interface PrizesFooterView : UICollectionReusableView
 
--(void)setupViewWithPrizeType:(PrizeType *)prizeType userPrizeStatus:(NSArray *)userPrizes;
+-(void)setupViewWithPrizeType:(PrizeType *)prizeType user:(User *)user;
 
 @end
