@@ -40,6 +40,7 @@
     [sr getUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
         UserTypes *types = [[UserTypes alloc] userTypesWithProperties:(NSArray *)json];
         self.currentUser.userTypeName = [types nameForUserType:self.currentUser.userType];
+        
         [sr getPrizeAndUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
             PrizeTypes *prizes = [[PrizeTypes alloc] prizeTypesWithProperties:json[@"prizes"]];
             self.prizesForUser = [prizes prizesForUserType:self.currentUser.userType];
