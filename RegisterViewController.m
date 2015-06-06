@@ -259,6 +259,9 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSUInteger charLimit = NSIntegerMax;
+    
+    BOOL returnVal = YES;
+    
     // allow backspace
     if (!string.length)
     {
@@ -277,6 +280,7 @@
     }
     else if (textField.keyboardType == UIKeyboardTypeNamePhonePad)
     {
+        charLimit = 20;
         if ([string rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound)
         {
             // BasicAlert(@"", @"This field accepts only alphanumeric entries.");
@@ -294,6 +298,7 @@
     }
     else if (textField.keyboardType == UIKeyboardTypeEmailAddress)
     {
+        
     }
     // verify max length has not been exceeded
     NSString *updatedText = [textField.text stringByReplacingCharactersInRange:range withString:string];
@@ -310,7 +315,7 @@
         return NO;
     }
     
-    return YES;
+    return returnVal;
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

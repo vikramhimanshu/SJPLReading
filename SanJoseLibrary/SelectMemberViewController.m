@@ -36,10 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     ServiceRequest *sr = [ServiceRequest sharedRequest];
     [sr getUserTypesWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
         self.userTypes = [[UserTypes alloc] userTypesWithProperties:(NSArray *)json];
     }];
+    
     if ([PersistentStore accountDetails]) {
         [sr getUserAccountDetailsWithCompletionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
             if (json != nil) {
