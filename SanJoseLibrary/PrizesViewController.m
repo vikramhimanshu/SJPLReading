@@ -46,7 +46,7 @@
             self.prizesForUser = [prizes prizesForUserType:self.currentUser.userType];
             
             if (response) {
-                dispatch_sync(dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
                     [self.prizeView setupViewWithPrizeType:self.prizesForUser
                                            user:self.currentUser];
                 });
@@ -59,10 +59,9 @@
 {
     NSString *returnValue = nil;
     
-    double readingMins = [self.currentUser.readingLog floatValue];
-    double hours = readingMins/60.0f;
-    NSInteger readingHours = floor(hours);
-    readingMins = ceil((hours-readingHours)*60.0);
+    NSInteger totalReadingMins = [self.currentUser.readingLog floatValue];
+    NSInteger readingMins = totalReadingMins % 60;
+    NSInteger readingHours = (totalReadingMins - readingMins)/60;
     
     if (readingHours > 0 && readingMins > 0)
     {

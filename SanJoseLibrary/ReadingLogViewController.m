@@ -209,7 +209,7 @@
     [[ServiceRequest sharedRequest] updateReadingLogForUser:self.currentUser
     completionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error)
     {
-        dispatch_sync(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             [self checkForReadingMileStones];
         });
     }];

@@ -58,7 +58,7 @@
         self.branches = [[Branches alloc] branchesWithProperties:(NSArray *)json];
         
         if (response) {
-            dispatch_sync(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
                 [self.branchNamesPicker reloadAllComponents];
             });
         }
@@ -83,7 +83,7 @@
     [sr startRegisterTaskWithParameters:acc completionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
         
         if (response) {
-            dispatch_sync(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
                 if (json) {
                     [self handleRegistrationCompleteWithData:json];
                 } else {
@@ -112,7 +112,7 @@
     [sr startLoginTaskWithParameters:acc
                    completionHandler:^(NSDictionary *json, NSURLResponse *response, NSError *error) {
                        Account *acc = [Account AccountWithProperties:json];
-                       dispatch_sync(dispatch_get_main_queue(), ^{
+                       dispatch_async(dispatch_get_main_queue(), ^{
                            [self handleResponse:acc];
                        });
                    }];
@@ -144,7 +144,7 @@
             self.branches = [[Branches alloc] branchesWithProperties:(NSArray *)json];
             
             if (response) {
-                dispatch_sync(dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
                     [self.branchNamesPicker reloadAllComponents];
                     [self switchToRegistrationView:sender];
                 });

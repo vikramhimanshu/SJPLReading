@@ -49,7 +49,7 @@
         ActivityGrids *ag = [[ActivityGrids alloc] activityGridsWithProperties:(NSArray *)json[@"grids"]];
         self.activityGrid = [ag activityGridForUserId:self.currentUser.userType];
         if (response) {
-            dispatch_sync(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
                 [self.activityGridCollectionView reloadData];
             });
         }        

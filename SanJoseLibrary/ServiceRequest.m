@@ -12,6 +12,7 @@
 #import "User.h"
 #import "Activity.h"
 #import "Utillities.h"
+#import "AFHTTPRequestOperationManager.h"
 
 static ServiceRequest *sharedInstance;
 
@@ -50,122 +51,93 @@ static ServiceRequest *sharedInstance;
 {
     NSString *urlStr = @"http://www.sjplsummer.org/prizes.json";
     
-//    id data = [PersistentStore objectWithKey:urlStr];
-//    
-//    if (data != nil) {
-//        NSError *error = nil;
-//        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-//        handler(json,nil,error);
-//        return;
-//    }
-    
-    NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createGetRequestForURLPath:urlStr]
-                                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                          {
-//                                              if (data && [data length]) {
-//                                                  [PersistentStore saveObject:data withKey:urlStr];
-//                                              }
-                                              NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                              
-                                              if (json && [(NSHTTPURLResponse*)response statusCode] == 200) {
-                                                  handler(json,response,error);
-                                              }else{
-                                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                                      [Utillities showBasicNetworkError];
-                                                  });
-                                              }
-                                          }];
-    [postDataTask resume];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:urlStr parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         handler(responseObject,operation.response,nil);
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"getGridDetailsWithCompletionHandler: %@", error);
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [Utillities showBasicNetworkError];
+         });
+     }
+     ];
 }
 
 - (void)getUserTypesWithCompletionHandler:(ServiceRequestCompletion)handler
 {
     NSString *urlStr = @"http://www.sjplsummer.org/user_types.json";
-    NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createGetRequestForURLPath:urlStr]
-                                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                          {
-                                              NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-
-                                              if (json && [(NSHTTPURLResponse*)response statusCode] == 200) {
-                                                  handler(json,response,error);
-                                              }else{
-                                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                                      [Utillities showBasicNetworkError];
-                                                  });
-                                              }
-                                          }];
-    [postDataTask resume];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:urlStr parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        handler(responseObject,operation.response,nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"getUserTypesWithCompletionHandler: %@", error);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [Utillities showBasicNetworkError];
+        });
+    }];
 }
 
 - (void)getGridDetailsWithCompletionHandler:(ServiceRequestCompletion)handler
 {
     NSString *urlStr = @"http://www.sjplsummer.org/grids.json";
-    NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createGetRequestForURLPath:urlStr]
-                                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                          {
-                                              NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                              
-                                              if (json && [(NSHTTPURLResponse*)response statusCode] == 200) {
-                                                  handler(json,response,error);
-                                              }else{
-                                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                                      [Utillities showBasicNetworkError];
-                                                  });
-                                              }
-                                          }];
-    [postDataTask resume];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:urlStr parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
+         {
+             handler(responseObject,operation.response,nil);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+         {
+             NSLog(@"getGridDetailsWithCompletionHandler: %@", error);
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [Utillities showBasicNetworkError];
+             });
+         }
+     ];
 }
 
 - (void)getBranchDetailsWithCompletionHandler:(ServiceRequestCompletion)handler
 {
     NSString *urlStr = @"http://www.sjplsummer.org/branches.json";
-    NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createGetRequestForURLPath:urlStr]
-                                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                          {
-                                              NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                              
-                                              if (json && [(NSHTTPURLResponse*)response statusCode] == 200) {
-                                                  handler(json,response,error);
-                                              }else{
-                                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                                      [Utillities showBasicNetworkError];
-                                                  });
-                                              }
-                                          }];
-    [postDataTask resume];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:urlStr parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         handler(responseObject,operation.response,nil);
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"getBranchDetailsWithCompletionHandler: %@", error);
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [Utillities showBasicNetworkError];
+         });
+     }
+     ];
 }
 
 - (void)getUserAccountDetailsWithCompletionHandler:(ServiceRequestCompletion)handler
 {
     Account *acc = [PersistentStore accountDetails];
     NSString *urlStr = [NSString stringWithFormat:@"http://www.sjplsummer.org/accounts/%@.json",acc.id];
-    
-    NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createGetRequestForURLPath:urlStr]
-                                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                          {
-                                              NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                              
-                                              if (json && [(NSHTTPURLResponse*)response statusCode] == 200) {
-                                                  handler(json,response,error);
-                                              }else{
-                                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                                      [Utillities showBasicNetworkError];
-                                                  });
-                                              }
-                                          }];
-    [postDataTask resume];
-
-}
-
-
--(NSMutableURLRequest *)createGetRequestForURLPath:(NSString *)endpoint
-{
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:endpoint]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:60.0];
-    
-    [request setHTTPMethod:@"GET"];
-    return request;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:urlStr parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         handler(responseObject,operation.response,nil);
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"getUserAccountDetailsWithCompletionHandler: %@", error);
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [Utillities showBasicNetworkError];
+         });
+     }
+     ];
 }
 
 -(void)updateAvtivityForUserID:(NSString *)userId
@@ -173,43 +145,50 @@ static ServiceRequest *sharedInstance;
                      cellIndex:(NSString *)cellIndex
              completionHandler:(ServiceRequestCompletion)handler
 {
-    NSMutableString *userActivityUrl = [NSMutableString stringWithFormat:@"http://www.sjplsummer.org/accounts/%@/users/%@/activity_grid/%@.json?",self.account.id,userId,cellIndex];
-    [userActivityUrl appendFormat:@"activity=%d&notes=%@&updatedAt=%@",userActivity.activity,userActivity.notes,userActivity.updatedAt];
+    NSMutableString *userActivityUrl = [NSMutableString stringWithFormat:@"http://www.sjplsummer.org/accounts/%@/users/%@/activity_grid/%@.json",self.account.id,userId,cellIndex];
     
-    NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createPutRequestForURLPath:userActivityUrl]
-                                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                          {
-                                              NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                              
-                                              if (json && [(NSHTTPURLResponse*)response statusCode] == 200) {
-                                                  handler(json,response,error);
-                                              }else{
-                                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                                      [Utillities showBasicNetworkError];
-                                                  });
-                                              }
-                                          }];
-    [postDataTask resume];
-
+    NSDictionary *parameters = @{@"activity":@(userActivity.activity),
+                                 @"notes":userActivity.notes,
+                                 @"updatedAt":userActivity.updatedAt};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager PUT:userActivityUrl parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         handler(responseObject,operation.response,nil);
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"updateAvtivityForUser: %@", error);
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [Utillities showBasicNetworkError];
+         });
+     }
+     ];
 }
 
 -(void)updateReadingLogForUser:(User *)user
              completionHandler:(ServiceRequestCompletion)handler
 {
-    NSURLSessionDataTask *postDataTask = [self.session dataTaskWithRequest:[self createRequestWithUser:user]
-                                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                          {
-                                              NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                              
-                                              if (json && [(NSHTTPURLResponse*)response statusCode] == 200) {
-                                                  handler(json,response,error);
-                                              }else{
-                                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                                      [Utillities showBasicNetworkError];
-                                                  });
-                                              }
-                                          }];
-    [postDataTask resume];
+    NSMutableString *loginURL = [NSMutableString stringWithFormat:@"http://www.sjplsummer.org/accounts/%@/users/%@/reading_log.json?",self.account.id,user.id];
+//    [loginURL appendFormat:@"readingLog=%@",user.readingLog];
+    
+    NSDictionary *parameters = @{@"readingLog":user.readingLog};
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager PUT:loginURL parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
+         {
+             handler(responseObject,operation.response,nil);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+         {
+             NSLog(@"updateReadingLogForUser: %@", error);
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [Utillities showBasicNetworkError];
+             });
+         }
+     ];
 }
 
 -(NSMutableURLRequest *)createRequestWithUser:(User *)user
