@@ -80,7 +80,7 @@
     if (sender.tag==0) {
         commonMsg = [NSString stringWithFormat:@"Complete this activity to win '##'."];
     } else if (sender.tag==1) {
-        commonMsg = [NSString stringWithFormat:@"Congratulations! You have won '##'. Visit your local library to pick up the prize."];
+        commonMsg = [NSString stringWithFormat:@"Congratulations! You have won '##'."];
     } else if (sender.tag==2) {
         commonMsg = [NSString stringWithFormat:@"Congratulations! You have collected '##'."];
     }
